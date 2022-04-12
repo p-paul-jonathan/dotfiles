@@ -154,29 +154,30 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  # Default colors
+  name: Garuda (dr460nized)
+  author: dr460nf1r3
   primary:
-    background: '#000000'
-    foreground: '#ffffff'
-  # Normal colors
+    background: '0x0a1124'
+    foreground: '0xeec49a'
+  cursor:
+    text: '0x0a1124'
+    cursor: '0xeec49a'
   normal:
-    black: '#000000'
-    red: '#cd0000'
-    green: '#00cd00'
-    yellow: '#cdcd00'
-    blue: '#0000ee'
-    magenta: '#cd00cd'
-    cyan: '#00cdcd'
-    white: '#e5e5e5'
-
-  # Bright colors
+    black: '0x0a1124'
+    red: '0x5F4149'
+    green: '0xEB3247'
+    yellow: '0xBC4349'
+    blue: '0xF35645'
+    magenta: '0xF6A73B'
+    cyan: '0xFAD32F'
+    white: '0xeec49a'
   bright:
-    black: '#7f7f7f'
-    red: '#ff0000'
-    green: '#00ff00'
-    yellow: '#ffff00'
-    blue: '#5c5cff'
-    magenta: '#ff00ff'
-    cyan: '#00ffff'
-    white: '#ffffff'
-theme: XTerm
+    black: '0xa6896b'
+    red: '0x5F4149'
+    green: '0xEB3247'
+    yellow: '0xBC4349'
+    blue: '0xF35645'
+    magenta: '0xF6A73B'
+    cyan: '0xFAD32F'
+    white: '0xeec49a'
+theme: Garuda.dr460nized
