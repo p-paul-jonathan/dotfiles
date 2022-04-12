@@ -1,3 +1,0 @@
-# dotfiles
-
-dotfiles for archlinux

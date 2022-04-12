@@ -9,8 +9,8 @@
 # XF86. Valid modifiers are Alt, Ctrl, Shift, Meta, Super and Hyper.
 #
 key "Super+Enter" alacritty
-key "Alt+Ctrl+l" i3lock -i /usr/share/backgrounds/arch.png
-key "Super+d" dmenu_run -fn 'Droid Sans Mono-20'
+key "Alt+Ctrl+l" i3lock -e -B 2 --ring-color=ffaa00 --indicator 
+key "Super+d" dmenu_run -fn 'Droid Sans Mono-15'
 
 # "Multimedia key" bindings for Xorg. Gather the keycodes of your
 # advanced function keys by watching the output of the xev command whilest
@@ -32,3 +32,4 @@ key "XF86_MonBrightnessUp"  brightnessctl set +50
 key "XF86_MonBrightnessDown"  brightnessctl set 50-
 
 switchkey "Super+p"         icewm-menu-xrandr
+
