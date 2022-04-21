@@ -32,6 +32,7 @@ git 2.36.0-1
 gnome-keyring 1:40.0-1
 gnome-sound-recorder 42.0-1
 grub 2:2.06-5
+grub-customizer 5.1.0-3
 guvcview 2.0.7-4
 gvfs 1.50.0+r5+g747c7f6e-1
 gvfs-smb 1.50.0+r5+g747c7f6e-1
