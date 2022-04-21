@@ -48,6 +48,7 @@ jupyter-notebook 6.4.11-1
 kamera 21.12.3-1
 krunner 5.93.0-1
 lftp 4.9.2-1
+libgnome-keyring 3.12.0+13+g4f8ab73-3
 libreoffice-fresh 7.3.2-2
 libtool 2.4.7-1
 linux 5.17.3.arch1-1
@@ -58,7 +59,7 @@ lynx 2.8.9-5
 m4 1.4.19-1
 make 4.3-3
 mariadb 10.7.3-1
-mongodb-compass 1.31.1-1
+mongodb-compass 1.31.2-1
 neofetch 7.1.0-2
 networkmanager 1.36.4-1
 nitrogen 1.6.1-4
@@ -92,7 +93,7 @@ tty-clock-git 185.f2f847c-1
 v4l2loopback-dkms 0.12.5-2
 vim 8.2.4651-1
 virtualbox 6.1.34-1
-visual-studio-code-bin 1.66.1-1
+visual-studio-code-bin 1.66.2-2
 vlc 3.0.17.3-1
 which 2.21-5
 wine 7.6-1
@@ -151,4 +152,4 @@ xorg-xwininfo 1.1.5-2
 xorg-xwud 1.0.5-2
 yay 11.1.2-1
 zip 3.0-10
-zoom 5.10.0-1
+zoom 5.10.3-1
