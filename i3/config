@@ -46,7 +46,7 @@ bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50-
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -230,7 +230,7 @@ gaps inner 10
 gaps outer 10
 
 # picom
-exec_always --no-startup-id picom -D 0 --inactive-opacity 0.7 --active-opacity 0.9
+exec_always --no-startup-id picom -D 0 --inactive-opacity 0.9 --active-opacity 0.98 
 
 default_border pixel 3
 
