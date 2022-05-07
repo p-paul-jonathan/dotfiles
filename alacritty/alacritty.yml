@@ -91,7 +91,7 @@ font:
     family: "monospace"
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Droid Sans
     # Bold font face
     #bold:
     # Font family
@@ -154,30 +154,32 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  name: Garuda (dr460nized)
-  author: dr460nf1r3
+  name: Black Hole
+  author: Paul
   primary:
-    background: '0x0a1124'
-    foreground: '0xeec49a'
+    background: '0x000000'
+    foreground: '0xff884d'
   cursor:
-    text: '0x0a1124'
-    cursor: '0xeec49a'
+    text: '0x000000'
+    cursor: '0xff884d'
   normal:
-    black: '0x0a1124'
-    red: '0x5F4149'
-    green: '0xEB3247'
-    yellow: '0xBC4349'
-    blue: '0xF35645'
-    magenta: '0xF6A73B'
-    cyan: '0xFAD32F'
-    white: '0xeec49a'
+    black: '0x000000'
+    red: '0xb33b00'
+    green: '0xcc4400'
+    yellow: '0xe64c00'
+    blue: '0xff5500'
+    magenta: '0xff661a'
+    cyan: '0xff7733'
+    white: '0xff884d'
   bright:
-    black: '0xa6896b'
-    red: '0x5F4149'
-    green: '0xEB3247'
-    yellow: '0xBC4349'
-    blue: '0xF35645'
-    magenta: '0xF6A73B'
-    cyan: '0xFAD32F'
-    white: '0xeec49a'
-theme: Garuda.dr460nized
+    black: '0xff0000'
+    red: '0xb33b00'
+    green: '0xcc4400'
+    yellow: '0xe64c00'
+    blue: '0xff5500'
+    magenta: '0xff661a'
+    cyan: '0xff7733'
+    white: '0xff884d'
+theme: Black Hole
+
+window.opacity: 1.0
