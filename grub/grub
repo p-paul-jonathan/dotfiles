@@ -39,11 +39,11 @@ GRUB_DISABLE_RECOVERY="true"
 
 # Uncomment and set to the desired menu colors.  Used by normal and wallpaper
 # modes only.  Entries specified as foreground/background.
-export GRUB_COLOR_NORMAL="cyan/black"
-export GRUB_COLOR_HIGHLIGHT="black/light-cyan"
+export GRUB_COLOR_NORMAL="light-magenta/black"
+export GRUB_COLOR_HIGHLIGHT="black/magenta"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-GRUB_BACKGROUND="/home/paul/backgrounds/blu.png"
+GRUB_BACKGROUND="/home/paul/backgrounds/city.jpg"
 #GRUB_THEME="/boot/grub/themes/starfield/theme.txt"
 
 # Uncomment to get a beep at GRUB start
@@ -62,3 +62,5 @@ GRUB_BACKGROUND="/home/paul/backgrounds/blu.png"
 # operating systems.
 GRUB_DISABLE_OS_PROBER="false"
 
+
+# GRUB_FONT="/boot/grub/unicode.pf2"

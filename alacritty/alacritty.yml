@@ -154,32 +154,37 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  name: Black Hole
-  author: Paul
+  # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xff884d'
+    background: '#09001a'
+    foreground: '#E5E5E5'
+
+  # Cursor colors
   cursor:
-    text: '0x000000'
-    cursor: '0xff884d'
+    text: '#09001a'
+    cursor: '#e5e5e5'
+
+  # Normal colors
   normal:
-    black: '0x000000'
-    red: '0xb33b00'
-    green: '0xcc4400'
-    yellow: '0xe64c00'
-    blue: '0xff5500'
-    magenta: '0xff661a'
-    cyan: '0xff7733'
-    white: '0xff884d'
+    black: '#000000'
+    red: '#cd3131'
+    green: '#0dbc79'
+    yellow: '#e5e510'
+    blue: '#2472c8'
+    magenta: '#bc3fbc'
+    cyan: '#11a8cd'
+    white: '#e5e5e5'
+
+  # Bright colors
   bright:
-    black: '0xff0000'
-    red: '0xb33b00'
-    green: '0xcc4400'
-    yellow: '0xe64c00'
-    blue: '0xff5500'
-    magenta: '0xff661a'
-    cyan: '0xff7733'
-    white: '0xff884d'
-theme: Black Hole
+    black: '#666666'
+    red: '#f14c4c'
+    green: '#23d18b'
+    yellow: '#f5f543'
+    blue: '#3b8eea'
+    magenta: '#d670d6'
+    cyan: '#29b8db'
+    white: '#ffffff'
+theme: Argonaut-vscode
 
 window.opacity: 1.0

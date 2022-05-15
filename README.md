@@ -5,4 +5,7 @@ Dotfiles for my build of arch linux
 ![i3wm rice](./images/i3.png)
 
 # Wallpaper
-![black hole nasa](./images/bl2.jpg)
+![purple techy](./images/bl2.jpg)
+
+# Grub Wallpaper
+![purple city cyberpunk](./images/city.jpg)
