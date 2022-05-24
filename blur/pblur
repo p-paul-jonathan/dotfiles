@@ -1,0 +1,17 @@
+#!/bin/bash
+if [[ $(tail -n1 ~/.fehbg | cut -d "'" -f2) = "$CACHEDIR/trans-9" ]]; then
+   # Reset wallpaper to original one
+    feh --bg-fill ~/backgrounds/purple.png
+fi
+
+while true; do
+	CURRWORKSPACE=$(wmctrl -d | grep '*' | cut -d ' ' -f1)
+	OPENWINDOWS=$(wmctrl -l | cut -d ' ' -f3 | grep $CURRWORKSPACE | wc -l)
+
+	if [[ $OPENWINDOWS > 0 ]] || [[ $(pgrep -cl rofi) > 0 ]]  || [[ $(pidof $ADDBLUR) > 0 ]]; then
+		feh --bg-fill ~/backgrounds/purblur.png
+	else
+		feh --bg-fill ~/backgrounds/purple.png
+	fi
+	sleep 0.2
+done

@@ -57,8 +57,6 @@ bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#bc3
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -154,8 +152,8 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "[l]ogout" {
-		bindsym l exec	i3-msg exit
-        bindsym Return exec i3-msg exit
+		bindsym l exec killall pblur && i3-msg exit
+        bindsym Return exec killall pblur && i3-msg exit
         bindsym Escape mode "default"
         bindsym $mod+Shift+e mode "default"
 }
@@ -220,7 +218,7 @@ bindsym Control+Mod1+l exec "i3lock -e -B 2 --ring-color=bc3fbc --indicator"
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
 
 # background
-exec_always feh ~/backgrounds/purple.jpg --bg-fill
+exec_always feh ~/backgrounds/purple.png --bg-fill
 
 # set mouse pointer speed
 exec_always xset m 250 0
@@ -230,7 +228,7 @@ gaps inner 10
 gaps outer 10
 
 # picom
-exec_always --no-startup-id picom -D 0 --inactive-opacity 0.9 --active-opacity 0.98 
+exec_always --no-startup-id picom -D 0 --inactive-opacity 0.5 --active-opacity 1.0
 
 default_border pixel 3
 
@@ -244,3 +242,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 exec --no-startup-id /usr/lib/polkit-kde-authentication-1
+exec --no-startup-id pblur
