@@ -7,11 +7,15 @@ fi
 while true; do
 	CURRWORKSPACE=$(wmctrl -d | grep '*' | cut -d ' ' -f1)
 	OPENWINDOWS=$(wmctrl -l | cut -d ' ' -f3 | grep $CURRWORKSPACE | wc -l)
-
+	CURRWALLPAPER=$(tail -n1 ~/.fehbg | cut -d "'" -f2)
 	if [[ $OPENWINDOWS > 0 ]] || [[ $(pgrep -cl rofi) > 0 ]]  || [[ $(pidof $ADDBLUR) > 0 ]]; then
-		feh --bg-fill ~/backgrounds/purblur.png
+		if [ $CURRWALLPAPER != "$HOME/backgrounds/purblur.png" ]; then
+			feh --bg-fill ~/backgrounds/purblur.png
+		fi
 	else
-		feh --bg-fill ~/backgrounds/purple.png
+		if [ $CURRWALLPAPER != "$HOME/backgrounds/purple.png" ]; then
+			feh --bg-fill ~/backgrounds/purple.png
+		fi
 	fi
 	sleep 0.2
 done
