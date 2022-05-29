@@ -12,4 +12,4 @@ Dotfiles for my build of arch linux
 ![purple turbulence blurred](./images/purblur.png)
 
 # Grub Wallpaper
-![purple city cyberpunk](./images/city.jpg)
+![purple city cyberpunk](./images/grub.png)

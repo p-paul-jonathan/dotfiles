@@ -228,7 +228,7 @@ gaps inner 10
 gaps outer 10
 
 # picom
-exec_always --no-startup-id picom -D 0 --inactive-opacity 0.5 --active-opacity 1.0
+exec_always --no-startup-id picom -D 0 --inactive-opacity 0.8 --active-opacity 1.0
 
 default_border pixel 3
 
