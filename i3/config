@@ -217,9 +217,6 @@ bindsym Control+Mod1+l exec "i3lock -e -B 2 --ring-color=bc3fbc --indicator"
 # auto lock the screen
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
 
-# background
-exec_always feh ~/backgrounds/purple.png --bg-fill
-
 # set mouse pointer speed
 exec_always xset m 250 0
 
@@ -242,4 +239,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 exec --no-startup-id /usr/lib/polkit-kde-authentication-1
-exec --no-startup-id pblur
+exec_always --no-startup-id pblur ~/backgrounds/purple.png

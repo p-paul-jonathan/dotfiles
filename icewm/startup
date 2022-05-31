@@ -1,6 +1,5 @@
 #!/bin/bash
 
 xrandr --output eDP-1 --mode 1600x900 & 
-feh ~/backgrounds/purple.png --bg-fill &
 picom -D 0 --inactive-opacity 0.8 --active-opacity 1.0 &
-pblur &
+pblur ~/backgrounds/purple.png &
