@@ -5,8 +5,7 @@ Dotfiles for my build of arch linux
 ![i3wm rice](./images/i3.png)
 
 # Wallpaper
-![purple turbulence](./images/purple.png)
-![purple turbulence blurred](./images/purblur.png)
+![purple turbulence](./images/bulb.jpg)
 
 # Grub Wallpaper
 ![purple blocks](./images/grub.png)
