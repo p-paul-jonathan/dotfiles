@@ -55,10 +55,10 @@
       <property name="HomePage" type="string" value="exo-open --launch WebBrowser"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;d" type="string" value="dmenu_run -fn &apos;Droid Sans Mono-15&apos;"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;f" type="string" value="thunar"/>
       <property name="&lt;Super&gt;e" type="string" value="thunar"/>
       <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
+      <property name="&lt;Alt&gt;d" type="string" value="dmenu_run -fn &apos;Droid Sans Mono-15&apos; -sb &apos;#bc3fbc&apos; -sf &apos;#000&apos;"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

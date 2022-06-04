@@ -18,6 +18,7 @@
         <value type="int" value="16"/>
         <value type="int" value="8"/>
         <value type="int" value="9"/>
+        <value type="int" value="3"/>
         <value type="int" value="10"/>
       </property>
       <property name="disable-struts" type="bool" value="false"/>
@@ -38,5 +39,8 @@
     </property>
     <property name="plugin-20" type="string" value="tasklist"/>
     <property name="plugin-1" type="string" value="whiskermenu"/>
+    <property name="plugin-3" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+    </property>
   </property>
 </channel>

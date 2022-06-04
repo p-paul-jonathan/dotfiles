@@ -1,6 +1,6 @@
 favorites=xfce4-web-browser.desktop,xfce4-mail-reader.desktop,xfce4-file-manager.desktop,xfce4-terminal-emulator.desktop
-recent=firefox.desktop,xfce-settings-manager.desktop,xfce4-power-manager-settings.desktop,xfce-ui-settings.desktop
-button-icon=org.xfce.panel.whiskermenu
+recent=xfce-display-settings.desktop,xfce-ui-settings.desktop,xfce4-color-settings.desktop,xfce4-notes.desktop,firefox.desktop,virtualbox.desktop,xfce4-session-logout.desktop,panel-preferences.desktop,pavucontrol.desktop,libreoffice-draw.desktop
+button-icon=/home/paul/Downloads/icons8-arch-linux-48.png
 button-single-row=false
 show-button-title=false
 show-button-icon=true
@@ -12,7 +12,7 @@ hover-switch-category=false
 category-show-name=true
 category-icon-size=1
 sort-categories=true
-view-mode=1
+view-mode=2
 default-category=0
 recent-items-max=10
 favorites-in-recent=true

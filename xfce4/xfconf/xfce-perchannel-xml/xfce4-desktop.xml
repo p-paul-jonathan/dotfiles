@@ -28,8 +28,8 @@
     </property>
   </property>
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="824"/>
-    <property name="window-height" type="int" value="644"/>
+    <property name="window-width" type="int" value="1024"/>
+    <property name="window-height" type="int" value="760"/>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="file-icons" type="empty">
