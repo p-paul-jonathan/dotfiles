@@ -10,8 +10,8 @@ source /usr/share/git/git-prompt.sh
 alias ls='ls --color=auto'
 alias listeners='lsof -i | grep LISTEN'
 alias desktop='startx /bin/gnome-session'
-alias twm='startx /bin/i3'
-alias swm='startx /bin/icewm-session'
+alias wm='startx /bin/i3'
+alias desktop='startx /bin/xfce4-session'
 
 PS1='\n\u@\h \w $(__git_ps1)\n\$ '
 export TerminalEmulator=alacritty

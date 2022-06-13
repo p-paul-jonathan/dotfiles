@@ -212,7 +212,7 @@ exec_always xrandr --output eDP-1 --mode 1600x900
 
 
 # keybinding to lock screen
-bindsym Control+Mod1+l exec "i3lock -e -B 2 --ring-color=bc3fbc --indicator"
+bindsym Control+Mod1+l exec i3lock-script
 
 
 # auto lock the screen

@@ -1,0 +1,2 @@
+#!/bin/bash
+i3lock -B 2 -k --time-color=bc3fcb --date-color=bc3fcb --indicator --inside-color=00000000 --ring-color=bc3fbc --keyhl-color=2472c8 --insidever-color=00000000 --ringver-color=2472c8 --insidewrong-color=00000000 --ringwrong-color=cd3131 --bshl-color=cd3131 --time-str="%H:%M" --verif-text="Checking" --wrong-text="Incorrect" --noinput-text="Empty" --verif-color=2472cd --wrong-color=cd3131

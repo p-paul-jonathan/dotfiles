@@ -5,8 +5,7 @@ V="-pblur."
 BLURREDWALLPAPER=$BW$V$MIME
 
 if [[ $(pgrep -cl pblur) > 1 ]]; then
-	echo 'BLURME: Another instance of blurme me is already running.'
-	echo '        Please kill it with fire (pkill blurme) first, then try running me again.'
+	echo "pblur already running please run killall pblur and then run this command again"
 	exit
 fi
 
@@ -16,10 +15,6 @@ if [ $1 =  ""];then
 else
 	feh --bg-fill $1
 fi
-
-#if [[ $(tail -n1 ~/.fehbg | cut -d "'" -f2) = $BLURREDWALLPAPER ]]; then
-#   feh --bg-fill $1
-#fi
 
 while true; do
 	CURRWORKSPACE=$(wmctrl -d | grep '*' | cut -d ' ' -f1)
