@@ -43,7 +43,7 @@ export GRUB_COLOR_NORMAL="light-magenta/black"
 export GRUB_COLOR_HIGHLIGHT="black/magenta"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-GRUB_BACKGROUND="/home/paul/backgrounds/city.jpg"
+GRUB_BACKGROUND="/home/paul/backgrounds/grub.png"
 #GRUB_THEME="/boot/grub/themes/starfield/theme.txt"
 
 # Uncomment to get a beep at GRUB start
