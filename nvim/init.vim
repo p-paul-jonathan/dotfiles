@@ -12,6 +12,7 @@ call plug#begin("~/.vim/plugged")
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python', 'coc-clangd']
 	Plug 'tpope/vim-fugitive'
+	Plug 'mhinz/vim-startify'
 call plug#end()
 
 
@@ -46,3 +47,16 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 nnoremap <Down> gj
 nnoremap <Up> gk
 
+" vim startify startup
+let g:startify_custom_header = [
+\'',
+\'',
+\'__________              .__/\          _______                    .__         ',
+\'\______   \_____   __ __|  )/  ______  \      \   ____  _______  _|__| _____  ',
+\' |     ___/\__  \ |  |  \  |  /  ___/  /   |   \_/ __ \/  _ \  \/ /  |/     \ ',
+\' |    |     / __ \|  |  /  |__\___ \  /    |    \  ___(  <_> )   /|  |  Y Y  \',
+\' |____|    (____  /____/|____/____  > \____|__  /\___  >____/ \_/ |__|__|_|  /',
+\'                \/                \/          \/     \/                    \/ ',
+\'',
+\'',
+\]
