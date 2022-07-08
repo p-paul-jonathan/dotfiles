@@ -52,7 +52,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#bc3fbc' -sf '#000'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#beb090' -sf '#000'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -197,7 +197,7 @@ bar {
 		background #000000
 		statusline #dddddd
 		separator #666666
-		focused_workspace #bc3fbc #bc3fbc #000000
+		focused_workspace #beb090 #beb090 #000000
 		active_workspace #333333 #333333 #888888
 		inactive_workspace #333333 #333333 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
@@ -220,6 +220,7 @@ bindsym Control+Mod1+l exec i3lock-script
 
 # set mouse pointer speed
 exec_always xset m 250 0
+exec_always xinput set-prop 15 311 1
 
 # Gaps
 gaps inner 10
@@ -229,7 +230,7 @@ gaps outer 10
 exec_always --no-startup-id picom -D 0 --inactive-opacity 0.8 --active-opacity 1.0
 
 #class                 border  backgr. text    indicator child_border
-client.focused          #000000 #bc3fbc #000000 #d670d6   #bc3fbc
+client.focused          #000000 #beb090 #000000 #8a7a63   #beb090
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -238,4 +239,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 exec --no-startup-id /usr/lib/polkit-kde-authentication-1
-exec_always --no-startup-id pblur ~/backgrounds/bulb.jpg
+exec_always --no-startup-id pblur ~/backgrounds/3d.jpg

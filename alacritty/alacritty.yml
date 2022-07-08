@@ -154,37 +154,32 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  # Default colors
+  name: Navy and Ivory
+  author: hal
   primary:
-    background: '#09001a'
-    foreground: '#E5E5E5'
-
-  # Cursor colors
+    background: "#021b21"
+    foreground: "#e8dfd6"
   cursor:
-    text: '#09001a'
-    cursor: '#e5e5e5'
-
-  # Normal colors
+    text: "#021b21"
+    cursor: "#e8dfd6"
   normal:
-    black: '#000000'
-    red: '#cd3131'
-    green: '#0dbc79'
-    yellow: '#e5e510'
-    blue: '#2472c8'
-    magenta: '#bc3fbc'
-    cyan: '#11a8cd'
-    white: '#e5e5e5'
-
-  # Bright colors
+    black: "#032c36"
+    red: "#c2454e"
+    green: "#7cbf9e"
+    yellow: "#8a7a63"
+    blue: "#2e3340"
+    magenta: "#ff5879"
+    cyan: "#44b5b1"
+    white: "#f2f1b9"
   bright:
-    black: '#666666'
-    red: '#f14c4c'
-    green: '#23d18b'
-    yellow: '#f5f543'
-    blue: '#3b8eea'
-    magenta: '#d670d6'
-    cyan: '#29b8db'
-    white: '#ffffff'
-theme: Argonaut-vscode
+    black: "#065f73"
+    red: "#ef5847"
+    green: "#a2d9b1"
+    yellow: "#beb090"
+    blue: "#61778d"
+    magenta: "#ff99a1"
+    cyan: "#9ed9d8"
+    white: "#f6f6c9"
+theme: Navy-and-ivory
 
 window.opacity: 1.0
