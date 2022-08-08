@@ -220,14 +220,14 @@ bindsym Control+Mod1+l exec i3lock-script
 
 # set mouse pointer speed
 exec_always xset m 250 0
-exec_always xinput set-prop 15 311 1
+exec_always xinput set-prop 15 310 1
 
 # Gaps
 gaps inner 10
 gaps outer 10
 
 # picom
-exec_always --no-startup-id picom -D 0 --inactive-opacity 0.8 --active-opacity 1.0
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 #class                 border  backgr. text    indicator child_border
 client.focused          #000000 #beb090 #000000 #8a7a63   #beb090

@@ -154,32 +154,36 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  name: Navy and Ivory
-  author: hal
+  # Default colors
   primary:
-    background: "#021b21"
-    foreground: "#e8dfd6"
-  cursor:
-    text: "#021b21"
-    cursor: "#e8dfd6"
+    background: '0x24292e'
+    foreground: '0xd1d5da'
+
+  # Normal colors
   normal:
-    black: "#032c36"
-    red: "#c2454e"
-    green: "#7cbf9e"
-    yellow: "#8a7a63"
-    blue: "#2e3340"
-    magenta: "#ff5879"
-    cyan: "#44b5b1"
-    white: "#f2f1b9"
+    black: '0x24292e'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xe2e210'
+    blue: '0x3b8eea'
+    magenta: '0xbc3fbc'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  # Bright colors
   bright:
-    black: "#065f73"
-    red: "#ef5847"
-    green: "#a2d9b1"
-    yellow: "#beb090"
-    blue: "#61778d"
-    magenta: "#ff99a1"
-    cyan: "#9ed9d8"
-    white: "#f6f6c9"
-theme: Navy-and-ivory
+    black: '0x666666'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xf5f543'
+    blue: '0x3b8eea'
+    magenta: '0xd670d6'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xf14c4c' }
+theme: github_dark
 
 window.opacity: 1.0
