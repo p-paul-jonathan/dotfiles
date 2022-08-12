@@ -186,4 +186,5 @@ colors:
     - { index: 17, color: '0xf14c4c' }
 theme: github_dark
 
-window.opacity: 1.0
+window:
+  opacity: 0.9
