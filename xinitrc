@@ -48,17 +48,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-session=${2:-i3}
 
-case $session in
-    i3|i3-ne				  ) exec i3 -c /home/paul/.config/i3/neutral-config;;
-    i3-bh							) exec i3 -c /home/paul/.config/i3/black-hole-config;;
-    i3-pr							) exec i3 -c /home/paul/.config/i3/purple-config;;
-		i3-bl							) exec i3 -c /home/paul/.config/i3/blue-ghosts-config;;
-    # No known session, try to run it as command
-    *                 ) exec $2;;
-esac
+if [-f ~/.config/i3/config]; then
+	echo "valid config exists"
+else
+	ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
+fi
 
+exec i3
 
 twm &
 xclock -geometry 50x50-1+1 &
