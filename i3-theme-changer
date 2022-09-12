@@ -4,11 +4,26 @@ arg=$1
 killall pblur || true
 sleep 1
 case $arg in
-	ne	) ln -sf ~/.config/i3/neutral-config ~/.config/i3/config;;
-	bh	) ln -sf ~/.config/i3/black-hole-config ~/.config/i3/config;;
-	pr	) ln -sf ~/.config/i3/purple-config ~/.config/i3/config;;
-	bl	) ln -sf ~/.config/i3/blue-ghosts-config ~/.config/i3/config;;
-	*	) ln -sf ~/.config/i3/neutral-config ~/.config/i3/config;;
+	ne	)
+		ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/neutral-alacritty.yml ~/.config/alacritty/alacritty.yml 
+		;;
+	bh	) 
+		ln -sf ~/.config/i3/black-hole-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/black-hole-alacritty.yml ~/.config/alacritty/alacritty.yml 
+		;;
+	pr	)
+		ln -sf ~/.config/i3/purple-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/purple-alacritty.yml ~/.config/alacritty/alacritty.yml
+		;;
+	bl	) 
+		ln -sf ~/.config/i3/blue-ghosts-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/blue-ghosts-alacritty.yml ~/.config/alacritty/alacritty.yml
+		;;
+	*	)
+		ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/neutral-alacritty.yml ~/.config/alacritty/alacritty.yml
+		;;
 esac
 
 sleep 1

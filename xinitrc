@@ -55,6 +55,13 @@ else
 	ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
 fi
 
+if [-f ~/.config/alacritty/alacritty.yml]; then
+	echo "valid alacritty.yml exists"
+else
+	ln -sf ~/.config/alacritty/neutral-alacritty.yml ~/.config/alacritty/alacritty.yml
+fi
+
+
 exec i3
 
 twm &
