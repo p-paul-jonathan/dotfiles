@@ -193,7 +193,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	font pango:monospace 12
-	status_command pstatus
+	status_command pi3status.sh
 	colors {
 		background #000000
 		statusline #dddddd

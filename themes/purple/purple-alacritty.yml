@@ -187,4 +187,5 @@ colors:
     white: '#ffffff'
 theme: Argonaut-vscode
 
-window.opacity: 1.0
+window:
+  opacity: 0.9

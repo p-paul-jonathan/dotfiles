@@ -192,7 +192,7 @@ bindsym $mod+r mode "resize"
 bar {
 	tray_output primary
 	font pango:DejaVu Sans Mono 12
-	status_command pstatus
+	status_command pi3status.sh
 	colors {
 		background #000000
 		statusline #dddddd
