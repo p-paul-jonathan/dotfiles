@@ -219,9 +219,7 @@ bindsym Control+Mod1+l exec i3lock-script
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
 
 # set mouse pointer speed
-exec_always xinput set-prop 15 329 0.4
-exec_always xinput set-prop 15 309 1
-
+exec_always /bin/set_touchpad_settings.sh
 # Gaps
 gaps inner 10
 gaps outer 10
