@@ -60,3 +60,5 @@ let g:startify_custom_header = [
 \'',
 \'',
 \]
+highlight Normal ctermbg=Black
+highlight NonText ctermbg=Black
