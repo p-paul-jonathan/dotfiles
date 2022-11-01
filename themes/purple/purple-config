@@ -225,7 +225,7 @@ gaps inner 10
 gaps outer 10
 
 # picom
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom --config /dev/null
 
 #class                 border  backgr. text    indicator child_border
 client.focused          #000000 #bc3fbc #000000 #d670d6   #bc3fbc

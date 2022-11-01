@@ -181,6 +181,3 @@ colors:
     cyan: '0xFAD32F'
     white: '0xeec49a'
 theme: Garuda.dr460nized
-
-window:
-  opacity: 0.9

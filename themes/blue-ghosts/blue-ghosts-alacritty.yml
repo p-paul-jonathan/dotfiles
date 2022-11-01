@@ -191,6 +191,3 @@ colors:
     cyan: '#6ae3fa'
     white: '#ffffff'
 theme: Cobalt-2
-
-window:
-  opacity: 0.9
