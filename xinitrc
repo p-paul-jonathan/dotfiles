@@ -49,13 +49,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
-if [-f ~/.config/i3/config]; then
+if [ -f ~/.config/i3/config ]; then
 	echo "valid config exists"
 else
 	ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
 fi
 
-if [-f ~/.config/alacritty/alacritty.yml]; then
+if [ -f ~/.config/alacritty/alacritty.yml ]; then
 	echo "valid alacritty.yml exists"
 else
 	ln -sf ~/.config/alacritty/neutral-alacritty.yml ~/.config/alacritty/alacritty.yml

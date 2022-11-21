@@ -6,15 +6,15 @@
 [[ $- != *i* ]] && return
 
 source /usr/share/git/git-prompt.sh
-source ~/bashrc_themes.sh
-source ~/bash_name.sh
-alias ls='ls --color=auto'
-alias listeners='lsof -i | grep LISTEN'
-alias desktop='startx /bin/gnome-session'
-alias wm='startx /bin/i3'
+source ~/bash_scripts/bashrc_themes.sh
+source ~/bash_scripts/bash_name.sh
+source ~/bash_scripts/aliases.sh
 
-PS1='\n\u@\h \w $(__git_ps1)\n\$ '
+PS1='\n\[\033[32m\]\u@\h\[\033[34m\] \w \[\033[31m\]$(__git_ps1)\n\[\033[37m\]\$ '
 export TerminalEmulator=alacritty
+
+bind '"\e[Z":menu-complete'
+
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
