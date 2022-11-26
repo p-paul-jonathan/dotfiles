@@ -9,6 +9,7 @@ if [ "$arg" = "--help" ]; then
 	echo "bh: black hole"
 	echo "pr: purple"
 	echo "bl: blue-ghosts"
+	echo "li: light theme"
 	echo "de: default (same as no arguments)"
 	exit
 fi
@@ -32,6 +33,10 @@ case $arg in
 	bl	) 
 		ln -sf ~/.config/i3/blue-ghosts-config ~/.config/i3/config
 		ln -sf ~/.config/alacritty/blue-ghosts-alacritty.yml ~/.config/alacritty/alacritty.yml
+		;;
+	li	) 
+		ln -sf ~/.config/i3/light-theme-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/light-theme-alacritty.yml ~/.config/alacritty/alacritty.yml
 		;;
 	*	)
 		ln -sf ~/.config/i3/default-config ~/.config/i3/config
