@@ -1,6 +1,19 @@
 #!/bin/bash
 arg=$1
 
+if [ "$arg" = "--help" ]; then
+	echo "i3 theme changer"
+	echo "Made By P Paul Jonathan"
+	echo "options:"
+	echo "ne: neutral"
+	echo "bh: black hole"
+	echo "pr: purple"
+	echo "bl: blue-ghosts"
+	echo "de: default (same as no arguments)"
+	exit
+fi
+
+
 killall pblur || true
 sleep 1
 case $arg in
@@ -21,8 +34,8 @@ case $arg in
 		ln -sf ~/.config/alacritty/blue-ghosts-alacritty.yml ~/.config/alacritty/alacritty.yml
 		;;
 	*	)
-		ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/neutral-alacritty.yml ~/.config/alacritty/alacritty.yml
+		ln -sf ~/.config/i3/default-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/default-alacritty.yml ~/.config/alacritty/alacritty.yml
 		;;
 esac
 

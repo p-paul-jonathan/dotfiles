@@ -1,10 +1,10 @@
 # Dotfiles
-Dotfiles for my build of arch linux
+Dotfiles for my build of Arch Linux
 
 ## Tools Used
 - Terminal: Alacritty
 - Window manager: I3
-- Status bar: i3status with modifications
-
+- Panel: XFCE4-Panel
+- Shell: zsh
 
 Add all the shell scripts to /bin/

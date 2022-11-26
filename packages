@@ -2,7 +2,7 @@ alacritty 0.11.0-2
 alsa-card-profiles 1:0.3.60-3
 alsa-firmware 1.2.4-2
 alsa-utils 1.2.8-1
-arch-install-scripts 27-1
+arch-install-scripts 28-1
 autoconf 2.71-1
 automake 1.16.5-1
 baobab 43.0-1
@@ -23,6 +23,7 @@ dconf-editor 43.0-1
 deluge 1:2.1.1-1
 discord 0.0.21-2
 dmenu 5.2-1
+docker 1:20.10.21-1
 dosfstools 4.2-2
 efibootmgr 18-1
 eog 43.1-1
@@ -37,7 +38,7 @@ flex 2.6.4-3
 gcc 12.2.0-1
 gdm 43.0-1
 geckodriver 0.30.0-1
-gedit 43.2-1
+gedit 43.2-2
 gimp 2.10.32-2
 git 2.38.1-2
 gnome-backgrounds 43-1
@@ -92,14 +93,13 @@ hplip 1:3.22.10-1
 htop 3.2.1-1
 i2c-tools 4.3-3
 i3-gaps 4.21.1-1
-i3blocks 1.5-3
 i3status 2.14-1
 icu69-bin 69.1-1
 jp2a 1.1.1-1
-libreoffice-fresh 7.4.2-2
+libreoffice-fresh 7.4.3-1
 libtool 2.4.7-5
 linux 6.0.9.arch1-1
-linux-firmware 20221109.60310c2-1
+linux-firmware 20221109.60310c2-2
 linux-headers 6.0.9.arch1-1
 lsof 4.96.4-1
 lxappearance 0.6.3-4
@@ -114,6 +114,7 @@ nautilus 43.0-1
 neofetch 7.1.0-2
 neovim 0.8.1-2
 networkmanager 1.40.4-1
+nm-connection-editor 1.30.0-1
 nodejs 19.1.0-1
 npm 8.19.2-1
 nsnake 3.0.1-2
@@ -126,13 +127,14 @@ patch 2.7.6-8
 pavucontrol 1:5.0+r61+gee77d86-2
 pcmanfm 1.3.2-1
 pgadmin4 4.30-4
-picom 10-1
+picom 10.1-1
 pkgconf 1.8.0-1
-postgresql 14.5-4
-postgresql-libs 14.5-4
+postgresql 14.6-1
+postgresql-libs 14.6-1
 powerline-fonts 2.8.3-1
 powertop 2.15-1
 pulseaudio 16.1-3
+putty 0.78-1
 python-pip 22.3.1-1
 qt5-virtualkeyboard 5.15.7-1
 qt5ct 1.5-2
@@ -143,7 +145,7 @@ ruby-sassc 2.4.0-2
 rygel 1:0.42.0-2
 screengrab 2.5.0-1
 simple-scan 42.5-1
-slack-electron 4.28.184-1
+slack-electron 4.29.144-1
 sudo 1.9.12.p1-1
 sushi 43.0-1
 terminus-font 4.49.1-2
@@ -174,6 +176,10 @@ xclip 0.13-3
 xdg-user-dirs-gtk 0.11-1
 xdotool 3.20211022.1-1
 xf86-video-vesa 2.5.0-3
+xfce4-panel 4.16.5-1
+xfce4-power-manager 4.16.0-3
+xfce4-pulseaudio-plugin 0.4.5-1
+xfce4-wavelan-plugin 0.6.3-1
 xorg-bdftopcf 1.1.1-1
 xorg-docs 1.7.2-1
 xorg-font-util 1.3.3-1
@@ -223,3 +229,4 @@ yay 11.3.1-1
 yelp 42.2-1
 zip 3.0-10
 zoom 5.12.6-1
+zsh 5.9-1
