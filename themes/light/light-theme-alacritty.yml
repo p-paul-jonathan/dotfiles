@@ -155,28 +155,28 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0xe8e9ec'
-    foreground: '0x33374c'
+    background: '#202734'
+    foreground: '#CBCCC6'
 
   # Normal colors
   normal:
-    black: '0xdcdfe7'
-    red: '0xcc517a'
-    green: '0x668e3d'
-    yellow: '0xc57339'
-    blue: '0x2d539e'
-    magenta: '0x7759b4'
-    cyan: '0x3f83a6'
-    white: '0x33374c'
+    black: '#191E2A'
+    red: '#FF3333'
+    green: '#BAE67E'
+    yellow: '#FFA759'
+    blue: '#73D0FF'
+    magenta: '#FFD580'
+    cyan: '#95E6CB'
+    white: '#C7C7C7'
 
   # Bright colors
   bright:
-    black: '0x8389a3'
-    red: '0xcc3768'
-    green: '0x598030'
-    yellow: '0xb6662d'
-    blue: '0x22478e'
-    magenta: '0x6845ad'
-    cyan: '0x327698'
-    white: '0x262a3f'
-theme: Iceberg-Light
+    black: '#686868'
+    red: '#F27983'
+    green: '#A6CC70'
+    yellow: '#FFCC66'
+    blue: '#5CCFE6'
+    magenta: '#FFEE99'
+    cyan: '#95E6CB'
+    white: '#FFFFFF'
+theme: Ayu-Mirage
