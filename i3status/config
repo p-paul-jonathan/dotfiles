@@ -1,6 +1,16 @@
+order += "volume master"
 order += "battery 0"
 order += "wireless wlo1"
-order += "tztime local"
+order += "tztime day_local"
+order += "tztime time_local"
+
+volume master {
+	format = "♪: %volume"
+	format_muted = "♪: muted (%volume)"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
 
 wireless wlo1 {
 	format_up = "W: (%quality at %essid, %bitrate)"
@@ -20,6 +30,10 @@ battery 0 {
 	format_percentage = "%.00f%s"
 }
 
-tztime local {
-	format = "%d/%m/%Y %H:%M"
+tztime day_local {
+	format = "%d/%m/%Y"
+}
+
+tztime time_local {
+	format = "%H:%M"
 }
