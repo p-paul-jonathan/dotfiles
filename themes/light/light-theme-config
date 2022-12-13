@@ -35,9 +35,9 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status kill -STOP pstatus && kill -CONT pstatus
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ && /bin/notifier.sh && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- && /bin/notifier.sh && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && /bin/notifier.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ && /bin/pvolnoti && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- && /bin/pvolnoti && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && /bin/pvolnoti
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 # bindsym XF86_MonBrightnessUp exec --no-startup-id brightnessctl set +50
 # bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50-
@@ -205,7 +205,7 @@ exec set_touchpad_settings.sh
 gaps inner 20
 
 # picom
-exec --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9 --opacity-rule "100:class_g='i3lock'" --config /dev/null
+exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9 --opacity-rule "100:class_g='i3lock'" --config /dev/null
 
 default_border normal 3
 
@@ -255,9 +255,6 @@ bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#fff
 # pblur
 exec_always --no-startup-id pblur ~/backgrounds/light-theme.jpg
 
-# volnoti
-exec /bin/volnoti
-
 # full screen toggle
-bindsym $mod+x exec --no-startup-id i3-msg gaps inner current set 0
-bindsym $mod+y exec --no-startup-id i3-msg gaps inner current set 20
+bindsym Control+Mod1+Up exec --no-startup-id i3-msg gaps inner current set 0
+bindsym Control+Mod1+Down exec --no-startup-id i3-msg gaps inner current set 20

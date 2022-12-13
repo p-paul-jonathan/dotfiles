@@ -149,37 +149,33 @@ font:
   # effect.
   # use_thin_strokes: true
 colors:
-  # Default colors
+  name: Default (dark)
+  author: Chris Kempson
   primary:
-    background: '0x0d1117'
-    foreground: '0xb3b1ad'
-
-  # Normal colors
+    background: "#151515"
+    foreground: "#d0d0d0"
+  cursor:
+    text: "#151515"
+    cursor: "#d0d0d0"
   normal:
-    black: '0x484f58'
-    red: '0xff7b72'
-    green: '0x3fb950'
-    yellow: '0xd29922'
-    blue: '0x58a6ff'
-    magenta: '0xbc8cff'
-    cyan: '0x39c5cf'
-    white: '0xb3b1ad'
-
-  # Bright colors
+    black: "#151515"
+    red: "#ac4142"
+    green: "#90a959"
+    yellow: "#f4bf75"
+    blue: "#6a9fb5"
+    magenta: "#aa759f"
+    cyan: "#75b5aa"
+    white: "#d0d0d0"
   bright:
-    black: '0x6e7681'
-    red: '0xffa198'
-    green: '0x56d364'
-    yellow: '0xe3b341'
-    blue: '0x79c0ff'
-    magenta: '0xd2a8ff'
-    cyan: '0x39c5cf'
-    white: '0xb3b1ad'
-
-  indexed_colors:
-    - { index: 16, color: '0xd18616' }
-    - { index: 17, color: '0xffa198' }
-theme: github_dark_default
+    black: "#505050"
+    red: "#ac4142"
+    green: "#90a959"
+    yellow: "#f4bf75"
+    blue: "#6a9fb5"
+    magenta: "#aa759f"
+    cyan: "#75b5aa"
+    white: "#f5f5f5"
+theme: Default.dark
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
