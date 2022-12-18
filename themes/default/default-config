@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: DejaVu Sans Mono 0 
+font pango: DejaVu Sans Mono 10 
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -211,17 +211,6 @@ default_border normal 3
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id /bin/xfce4-power-manager
 
-bar {
-	id top-bar
-	position top
-	tray_output none
-	font pango: DejaVu Sans Mono 15
-	status_command /bin/win-switcher.sh
-	workspace_buttons no
-	binding_mode_indicator no
-}
-
-
 
 bar {
 	font pango: DejaVu Sans Mono 15
@@ -231,13 +220,13 @@ bar {
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #285577 #285577 #285577 #2e9ef4   #285577
-client.focused_inactive #5f676a #5f676a #5f676a #484e50   #5f676a
-client.unfocused        #222222 #222222 #222222 #292d2e   #222222
-client.urgent           #900000 #900000 #900000 #900000   #900000
-client.placeholder      #0c0c0c #0c0c0c #0c0c0c #000000   #0c0c0c
+client.focused          #285577 #222222 #ffffff #2e9ef4   #285577
+client.focused_inactive #5f676a #222222 #ffffff #484e50   #5f676a
+client.unfocused        #222222 #222222 #ffffff #292d2e   #222222
+client.urgent           #900000 #222222 #ffffff #900000   #900000
+client.placeholder      #0c0c0c #222222 #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background       #285577
 
 # dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15'

@@ -13,7 +13,8 @@ source ~/bash_scripts/aliases.sh
 PS1='\n\[\033[32m\]\u@\h\[\033[34m\] \w \[\033[31m\]$(__git_ps1)\n\[\033[37m\]\$ '
 export TerminalEmulator=alacritty
 
-bind '"\e[Z":menu-complete'
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
 
 
 export PATH="$HOME/.rbenv/bin:$PATH"
