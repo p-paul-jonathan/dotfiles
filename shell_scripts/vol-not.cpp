@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
 	string k;
 	pm_val.pop_back();
 	if(pm_val == "muted") {
-		k = "notify-send -i ~/Downloads/volume-up-interface-symbol.png MUTED -p -r " + oup;
+		k = "notify-send -i ~/Downloads/volume-up-interface-symbol.png MUTED -h int:value:0 -p -r " + oup;
 	} else {
 		k = "notify-send -i ~/Downloads/volume-up-interface-symbol.png " + pm_val + " -h int:value:" + pm_val + " -p -r " + oup;
 	}
