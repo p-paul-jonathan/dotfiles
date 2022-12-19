@@ -22,7 +22,7 @@ string exec(const char* cmd) {
     return result;
 }
 
-int main() {
+int main(int argc, char **argv) {
 	string home_dir = getenv("HOME");
 	ifstream t(home_dir + "/.notif-val");
 	if(t.fail()) {
@@ -33,9 +33,16 @@ int main() {
 	stringstream buf;
 	buf << t.rdbuf();
 	string oup = buf.str();
-	if(oup.length() == 0) { oup = "-1"; }
+	if(oup.length() == 0) { oup = "0"; }
 	t.close();
-	string k = "notify-send -i ~/Downloads/volume-up-interface-symbol.png -p $(pamixer --get-volume-human) -r " + oup;
+	string pm_val = exec("pamixer --get-volume-human");
+	string k;
+	pm_val.pop_back();
+	if(pm_val == "muted") {
+		k = "notify-send -i ~/Downloads/volume-up-interface-symbol.png MUTED -p -r " + oup;
+	} else {
+		k = "notify-send -i ~/Downloads/volume-up-interface-symbol.png " + pm_val + " -h int:value:" + pm_val + " -p -r " + oup;
+	}
 	oup = exec(k.c_str());
 	ofstream o(home_dir + "/.notif-val");
 	o << oup;
