@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source /usr/share/git/git-prompt.sh
+source ~/bash_scripts/git-prompt.sh
 source ~/bash_scripts/bashrc_themes.sh
 source ~/bash_scripts/bash_name.sh
 source ~/bash_scripts/aliases.sh
@@ -15,7 +15,6 @@ export TerminalEmulator=alacritty
 
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+bind '"\e[Z":menu-complete-backward'
 
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="$HOME/.emacs.d/bin:$PATH"
