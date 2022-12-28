@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: DejaVu Sans Mono 10 
+font pango: DejaVu Sans Mono 13 
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -31,7 +31,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec_always --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status kill -STOP pstatus && kill -CONT pstatus
@@ -188,7 +188,7 @@ bindsym $mod+r mode "resize"
 
 # Display Config
 
-exec_always --no-startup-id xrandr --output eDP-1 --mode 1600x900
+exec_always xrandr --output eDP-1 --mode 1600x900
 
 
 # keybinding to lock screen
@@ -199,7 +199,7 @@ bindsym Control+Mod1+l exec i3lock-script
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
 
 # set mouse pointer speed
-exec_always --no-startup-id set_touchpad_settings.sh
+exec_always set_touchpad_settings.sh
 # Gaps
 gaps inner 20
 
