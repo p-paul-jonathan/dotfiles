@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: DejaVu Sans Mono 13 
+font pango: DejaVu Sans Mono 0 
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -31,13 +31,13 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec_always --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status kill -STOP pstatus && kill -CONT pstatus
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && /bin/pvolnoti && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && /bin/pvolnoti && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && /bin/pvolnoti
+# set $refresh_i3status kill -STOP pstatus && kill -CONT pstatus
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 # bindsym XF86_MonBrightnessUp exec --no-startup-id brightnessctl set +50
 # bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50-
@@ -51,7 +51,8 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-
+# start dmenu (a program launcher)
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -153,11 +154,11 @@ bindsym $mod+Shift+r restart
 mode "[l]ogout" {
 				bindsym l exec killall pblur && i3-msg exit
         bindsym Return exec killall pblur && i3-msg exit
-        bindsym Escape mode "default"
-        bindsym $mod+Shift+e mode "default"
+        bindsym Escape mode "default" exec "killall i3-nagbar"
+        bindsym $mod+Shift+e mode "default" exec "killall i3-nagbar"
 }
 
-bindsym $mod+Shift+e mode "[l]ogout"
+bindsym $mod+Shift+e mode "[l]ogout" exec "i3-nagbar -m 'Logout Mode' -f 'xft:DejaVu Sans Mono:size=30'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -178,17 +179,17 @@ mode "resize" {
         bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym Return mode "default" exec "killall i3-nagbar"
+        bindsym Escape mode "default" exec "killall i3-nagbar"
+        bindsym $mod+r mode "default" exec "killall i3-nagbar"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize" exec "i3-nagbar -m 'Resize Mode' -f 'xft:DejaVu Sans Mono:size=30'"
 
 
 # Display Config
 
-exec_always --no-startup-id xrandr --output eDP-1 --mode 1600x900
+exec_always xrandr --output eDP-1 --mode 1600x900
 
 
 # keybinding to lock screen
@@ -199,45 +200,30 @@ bindsym Control+Mod1+l exec i3lock-script
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
 
 # set mouse pointer speed
-exec_always --no-startup-id set_touchpad_settings.sh
+exec_always set_touchpad_settings.sh
 # Gaps
 gaps inner 20
 
 # picom
-exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9 --opacity-rule "100:class_g='i3lock'" --config /dev/null
-
-default_border normal 1
-
-exec_always --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
-exec_always --no-startup-id /bin/xfce4-power-manager
-
-
-bar {
-	font pango: DejaVu Sans Mono 15
-	status_command i3status
-	id bottom-bar
-	tray_output primary
-}
+exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9  --opacity-rule "100:class_g='i3lock'" --config=/dev/null
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #285577 #222222 #ffffff #2e9ef4   #285577
-client.focused_inactive #5f676a #222222 #ffffff #484e50   #5f676a
-client.unfocused        #222222 #222222 #ffffff #292d2e   #222222
-client.urgent           #900000 #222222 #ffffff #900000   #900000
-client.placeholder      #0c0c0c #222222 #ffffff #000000   #0c0c0c
+client.focused          #285577 #285577 #285577 #2e9ef4   #285577
+client.focused_inactive #5f676a #5f676a #5f676a #484e50   #5f676a
+client.unfocused        #222222 #222222 #222222 #292d2e   #222222
+client.urgent           #900000 #900000 #900000 #900000   #900000
+client.placeholder      #0c0c0c #0c0c0c #0c0c0c #000000   #0c0c0c
+client.background       #ffffff
 
-client.background       #285577
-
-# dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15'
-
-
-# pblur
+# background
 exec_always --no-startup-id pblur ~/backgrounds/default-i3-wp.jpg
 
-# full screen toggle
-bindsym Control+Mod1+Up exec --no-startup-id i3-msg gaps inner current set 0
-bindsym Control+Mod1+Down exec --no-startup-id i3-msg gaps inner current set 20
+# border
+default_border normal 4
 
-# emacs
-exec_always --no-startup-id /usr/bin/emacs --daemon
+# xfce4-stuff
+exec_always --no-startup-id /bin/xfce4-stuff-startup.sh
+
+# full screen
+bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
+bindsym Control+Mod1+Down exec i3-msg gaps inner current set 20

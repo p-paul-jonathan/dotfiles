@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: DejaVu Sans Mono 0 
+font pango:DejaVu Sans Mono 0
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -46,17 +46,19 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#bc3fbc' -sf '#000'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#037304' -sf '#000'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -152,7 +154,7 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "[l]ogout" {
-				bindsym l exec killall pblur && i3-msg exit
+		bindsym l exec killall pblur && i3-msg exit
         bindsym Return exec killall pblur && i3-msg exit
         bindsym Escape mode "default" exec "killall i3-nagbar"
         bindsym $mod+Shift+e mode "default" exec "killall i3-nagbar"
@@ -194,35 +196,34 @@ exec_always xrandr --output eDP-1 --mode 1600x900
 # keybinding to lock screen
 bindsym Control+Mod1+l exec i3lock-script
 
-
 # auto lock the screen
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
 
 # set mouse pointer speed
-exec_always set_touchpad_settings.sh
+exec_always /bin/set_touchpad_settings.sh
 # Gaps
 gaps inner 20
 
 # picom
-exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9  --opacity-rule "100:class_g='i3lock'" --config=/dev/null
+exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9 --opacity-rule "100:class_g='i3lock'" --config=/dev/null
 
 #class                 border  backgr. text    indicator child_border
-client.focused          #bc3fbc #bc3fbc #bc3fbc #d670d6   #bc3fbc
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.focused          #037304 #037304 #037304 #014d38   #037304
+client.focused_inactive #333333 #333333 #333333 #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-# pblur
-exec_always --no-startup-id pblur ~/backgrounds/purple.png
+# background
+exec_always --no-startup-id pblur ~/backgrounds/green.jpg
 
 # xfce4-stuff
 exec_always --no-startup-id /bin/xfce4-stuff-startup.sh
 
 # border
-default_border normal 4
+default_border pixel 4
 
 # full screen
 bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
