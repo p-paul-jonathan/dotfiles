@@ -186,3 +186,6 @@ colors:
     cyan: '#29b8db'
     white: '#ffffff'
 theme: Argonaut-vscode
+
+window:
+  opacity: 0.9

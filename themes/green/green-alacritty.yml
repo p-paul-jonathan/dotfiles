@@ -180,3 +180,6 @@ colors:
     cyan: "#2d8f6f"
     white: "#ebf8ff"
 theme: Atelierlakeside.dark
+
+window:
+  opacity: 0.9

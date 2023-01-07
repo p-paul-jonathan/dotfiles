@@ -180,3 +180,6 @@ colors:
     cyan: '#95E6CB'
     white: '#FFFFFF'
 theme: Ayu-Mirage
+
+window:
+  opacity: 0.9

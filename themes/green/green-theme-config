@@ -52,7 +52,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#037304' -sf '#000'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#037304' -sf '#fff'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -194,7 +194,7 @@ exec_always xrandr --output eDP-1 --mode 1600x900
 
 
 # keybinding to lock screen
-bindsym Control+Mod1+l exec i3lock-script
+bindsym Control+Mod1+l exec xflock4
 
 # auto lock the screen
 # exec_always  "xautolock -detectsleep -time 3 -locker \"i3lock -i /usr/share/backgrounds/arch.png \""
@@ -205,7 +205,7 @@ exec_always /bin/set_touchpad_settings.sh
 gaps inner 20
 
 # picom
-exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9 --opacity-rule "100:class_g='i3lock'" --config=/dev/null
+exec_always --no-startup-id picom --inactive-dim 0.2 --config=/dev/null
 
 #class                 border  backgr. text    indicator child_border
 client.focused          #037304 #037304 #037304 #014d38   #037304
@@ -217,7 +217,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # background
-exec_always --no-startup-id pblur ~/backgrounds/green.jpg
+exec_always --no-startup-id feh --bg-fill ~/backgrounds/green.jpg
 
 # xfce4-stuff
 exec_always --no-startup-id /bin/xfce4-stuff-startup.sh

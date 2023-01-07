@@ -181,3 +181,6 @@ colors:
     cyan: '#9fc9c3'
     white: '#fcf7e2'
 theme: Hybrid
+
+window:
+  opacity: 0.9

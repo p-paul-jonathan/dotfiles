@@ -192,7 +192,7 @@ exec_always xrandr --output eDP-1 --mode 1600x900
 
 
 # keybinding to lock screen
-bindsym Control+Mod1+l exec i3lock-script
+bindsym Control+Mod1+l exec xflock4
 
 
 # auto lock the screen
@@ -204,7 +204,7 @@ exec_always set_touchpad_settings.sh
 gaps inner 20
 
 # picom
-exec_always --no-startup-id picom --inactive-dim 0.2 --inactive-opacity 0.9  --opacity-rule "100:class_g='i3lock'" --config=/dev/null
+exec_always --no-startup-id picom --inactive-dim 0.2 --config=/dev/null
 
 #class                 border  backgr. text    indicator child_border
 client.focused          #bc3fbc #bc3fbc #bc3fbc #d670d6   #bc3fbc
@@ -216,7 +216,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # pblur
-exec_always --no-startup-id pblur ~/backgrounds/purple.png
+exec_always --no-startup-id feh --bg-fill ~/backgrounds/purple.png
 
 # xfce4-stuff
 exec_always --no-startup-id /bin/xfce4-stuff-startup.sh
