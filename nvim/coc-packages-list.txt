@@ -1,0 +1,13 @@
+coc-snippets
+coc-emmet
+coc-cssmodules
+coc-yaml	
+coc-xml	
+coc-vimlsp
+coc-tsserver
+coc-solargraph
+coc-python
+coc-json
+coc-deno
+coc-css
+coc-clangd

@@ -152,8 +152,8 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "[l]ogout" {
-				bindsym l exec killall pblur && i3-msg exit
-        bindsym Return exec killall pblur && i3-msg exit
+				bindsym l exec i3-msg exit
+        bindsym Return exec i3-msg exit
         bindsym Escape mode "default" exec "killall i3-nagbar"
         bindsym $mod+Shift+e mode "default" exec "killall i3-nagbar"
 }
