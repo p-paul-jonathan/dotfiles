@@ -3,49 +3,31 @@ arg=$1
 
 if [ "$arg" = "--help" ]; then
 	echo "i3 theme changer"
-	echo "Made By P Paul Jonathan"
-	echo "options:"
-	echo "ne: neutral"
-	echo "bh: black hole"
-	echo "pr: purple"
-	echo "bl: blue-ghosts"
-	echo "li: light theme"
-	echo "gr: green theme"
-	echo "de: default (same as no arguments)"
+	echo "  Made By P Paul Jonathan"
+	echo "  options:"
+	echo "    pr: purple"
+	echo "    gr: green"
+	echo "    bl: blue"
+	echo "    no: nord (same as no arguments)"
 	exit
 fi
 
-
-killall pblur || true
-sleep 1
 case $arg in
-	ne	)
-		ln -sf ~/.config/i3/neutral-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/neutral-alacritty.yml ~/.config/alacritty/alacritty.yml 
-		;;
-	bh	) 
-		ln -sf ~/.config/i3/black-hole-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/black-hole-alacritty.yml ~/.config/alacritty/alacritty.yml 
-		;;
-	pr	)
+	pr	) 
 		ln -sf ~/.config/i3/purple-config ~/.config/i3/config
 		ln -sf ~/.config/alacritty/purple-alacritty.yml ~/.config/alacritty/alacritty.yml
 		;;
-	bl	) 
-		ln -sf ~/.config/i3/blue-ghosts-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/blue-ghosts-alacritty.yml ~/.config/alacritty/alacritty.yml
-		;;
-	li	) 
-		ln -sf ~/.config/i3/light-theme-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/light-theme-alacritty.yml ~/.config/alacritty/alacritty.yml
-		;;
-	gr	)
-		ln -sf ~/.config/i3/green-theme-config ~/.config/i3/config
+	gr	) 
+		ln -sf ~/.config/i3/green-config ~/.config/i3/config
 		ln -sf ~/.config/alacritty/green-alacritty.yml ~/.config/alacritty/alacritty.yml
 		;;
+	bl	)
+		ln -sf ~/.config/i3/blue-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/blue-alacritty.yml ~/.config/alacritty/alacritty.yml
+		;;
 	*	)
-		ln -sf ~/.config/i3/default-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/default-alacritty.yml ~/.config/alacritty/alacritty.yml
+		ln -sf ~/.config/i3/nord-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/nord-alacritty.yml ~/.config/alacritty/alacritty.yml
 		;;
 esac
 
