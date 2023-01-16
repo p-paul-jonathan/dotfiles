@@ -28,6 +28,6 @@ Dotfiles for my build of Arch Linux
 - Purple
   ![purple-theme-desktop](screenshots/purple-3.png)
   ![purple-theme-neofetch](screenshots/purple-1.png)
-  ![green-theme-text-editor](screenshots/green-4.png)
+  ![green-theme-text-editor](screenshots/purple-4.png)
   ![purple-theme-apps](screenshots/purple-2.png)
   
