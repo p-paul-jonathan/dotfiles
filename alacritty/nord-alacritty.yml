@@ -180,6 +180,3 @@ colors:
     cyan: '#8FBCBB'
     white: '#ECEFF4'
 theme: Nord
-
-window:
-  opacity: 0.9

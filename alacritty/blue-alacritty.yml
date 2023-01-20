@@ -127,7 +127,6 @@ font:
 
   # Point size
   size: 15.0
-
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -191,6 +190,3 @@ colors:
     cyan: '#6ae3fa'
     white: '#ffffff'
 theme: Cobalt-2
-
-window:
-  opacity: 0.9
