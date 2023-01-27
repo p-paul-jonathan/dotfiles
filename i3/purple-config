@@ -204,7 +204,7 @@ exec_always set_touchpad_settings.sh
 gaps inner 20
 
 # picom
-exec_always --no-startup-id picom --inactive-dim 0.2 --config=/dev/null
+exec_always --no-startup-id picom --config=~/.config/picom/picom.conf
 
 #class                 border  backgr. text    indicator child_border
 client.focused          #bc3fbc #bc3fbc #bc3fbc #d670d6   #bc3fbc
