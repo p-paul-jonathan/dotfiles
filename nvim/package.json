@@ -12,7 +12,8 @@
     "coc-emmet": ">=1.1.6",
     "coc-solargraph": ">=1.2.4",
     "coc-xml": ">=1.14.1",
-    "coc-yaml": ">=1.9.0"
+    "coc-yaml": ">=1.9.0",
+    "coc-sh": ">=0.7.0"
   },
-  "lastUpdate": 1673539901170
+  "lastUpdate": 1674821854055
 }
