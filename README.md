@@ -39,7 +39,7 @@ Dotfiles for my build of Arch Linux
 - Purple
   - VSCode Theme: Argonaut
   - Alacritty Theme: Argonaut-vscode
-  - Wallpaper: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Ies-iOaS_jYy7XWhtZtB_AHaEK%26pid%3DApi&f=1&ipt=fec0e71ce2faeffd4c34e1c4537a7c09802de14b722a2d8a4b42a41a069e4daa&ipo=images
+  - Wallpaper: https://wallpapercrafter.com/desktop/121296-DominiqueVanVelsen-cyberpunk-city-night-rain-neon-glow-cityscape-purple-bridge.jpg
   ![purple-theme-desktop](screenshots/purple-1.png)
   ![purple-theme-neofetch](screenshots/purple-2.png)
   ![green-theme-text-editor](screenshots/purple-3.png)
