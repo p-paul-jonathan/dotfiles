@@ -2,12 +2,19 @@
 
 opt=$1
 
-if [ -f ~/.paul-noti/notif-val ]; then
-    :
-else
+if [ ! -f ~/.paul-noti/notif-val ]; then
     mkdir ~/.paul-noti
     echo 0 > ~/.paul-noti/notif-val
     echo 0 > ~/.paul-noti/bnotif-val
+fi
+
+if [ $(wc -c < ~/.paul-noti/notif-val) -eq 1 ]; then
+   echo 0 > ~/.paul-noti/notif-val
+fi
+
+if [ $(wc -c < ~/.paul-noti/bnotif-val) -eq 1 ]; then
+   echo 0 > ~/.paul-noti/bnotif-val
+
 fi
 
 case $opt in
