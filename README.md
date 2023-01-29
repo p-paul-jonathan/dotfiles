@@ -11,7 +11,7 @@ Dotfiles for my build of Arch Linux
 ## Themes
 - Blue
   - VSCode Theme: Solarized Dark
-  - Alacritty Theme: Cobalt-2
+  - Alacritty Theme: Solarized Dark
   - Wallpaper: https://wallpapercave.com/wp/wp8612373.jpg
   ![blue-theme-desktop](screenshots/blue-1.png)
   ![blue-theme-neofetch](screenshots/blue-2.png)
@@ -20,7 +20,7 @@ Dotfiles for my build of Arch Linux
 
 - Green
   - VSCode Theme: Gruvbox Dark Hard
-  - Alacritty Theme: Atelierlakeside.dark
+  - Alacritty Theme: Gruvbox Dark Hard
   - Wallpaper: https://free4kwallpapers.com/uploads/originals/2021/02/22/trees-minimalist-wallpaper.jpg
   ![green-theme-desktop](screenshots/green-1.png)
   ![green-theme-neofetch](screenshots/green-2.png)
@@ -37,7 +37,7 @@ Dotfiles for my build of Arch Linux
   ![nord-theme-apps](screenshots/nord-4.png)
   
 - Purple
-  - VSCode Theme: Argonaut
+  - VSCode Theme: Argonaut-vscode
   - Alacritty Theme: Argonaut-vscode
   - Wallpaper: https://wallpapercrafter.com/desktop/121296-DominiqueVanVelsen-cyberpunk-city-night-rain-neon-glow-cityscape-purple-bridge.jpg
   ![purple-theme-desktop](screenshots/purple-1.png)

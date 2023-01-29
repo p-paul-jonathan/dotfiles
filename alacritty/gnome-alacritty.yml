@@ -14,11 +14,6 @@ env:
   LANG: "en_US.UTF-8"
   LC_CTYPE: en_US.UTF-8
   #window:
-  # Window background opacity
-  #
-  # Specified in floating number from `0.0` to `1.0`.
-  # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -126,7 +121,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 15.0
+  size: 20.0
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -158,36 +153,30 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  theme: VSCode Solarized Dark
-  author: P Paul Jonathan
-  cursor:
-    text: '#022b36'
-    cursor: '#b9bcbd'
-
-  selection:
-    text: '#022b36'
-    background: '#b9bcbd'
-
+  # Default colors
   primary:
-    background: '#022b36'
-    foreground: '#b9bcbd'
+    background: '#2E3440'
+    foreground: '#D8DEE9'
 
+  # Normal colors
   normal:
-    black: '#083542'
-    red: '#c83230'
-    green: '#7a8e06'
-    yellow: '#a58006'
-    blue: '#2482c3'
-    magenta: '#c0357b'
-    cyan: '#28958f'
-    white: '#d8d5c5'
+    black: '#3B4252'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#88C0D0'
+    white: '#E5E9F0'
 
+  # Bright colors
   bright:
-    black: '#022b36'
-    red: '#b9481a'
-    green: '#51686f'
-    yellow: '#5d737b'
-    blue: '#788a8d'
-    magenta: '#636ab6'
-    cyan: '#869597'
-    white: '#e5e1d2'
+    black: '#4C566A'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#8FBCBB'
+    white: '#ECEFF4'
+theme: Nord
