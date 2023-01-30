@@ -217,7 +217,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # background
-exec_always --no-startup-id feh --bg-fill ~/backgrounds/nord.png
+exec_always --no-startup-id ~/bash_scripts/set_c_theme.sh
 
 # border
 default_border pixel 4
@@ -231,3 +231,6 @@ exec_always --no-startup-id ~/.config/polybar/startup.sh
 # full screen
 bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
 bindsym Control+Mod1+Down exec i3-msg gaps inner current set 20
+
+# toggle dark mode
+bindsym $mod+Shift+t exec --no-startup-id ~/bash_scripts/set_c_theme.sh -t && ~/bash_scripts/set_c_theme.sh
