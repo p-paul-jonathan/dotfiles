@@ -24,7 +24,7 @@ case $curr_theme in
 		if [ $curr_col -eq 0 ]; then
 			feh --bg-fill ~/backgrounds/purple.jpg
 		else
-			feh --bg-fill ~/backgrounds/purple-light.png
+			feh --bg-fill ~/backgrounds/purple-light.jpg
 		fi
 		;;
 	green)
@@ -36,14 +36,14 @@ case $curr_theme in
 		;;
 	blue)
 		if [ $curr_col -eq 0 ]; then
-			feh --bg-fill ~/backgrounds/blue.png
+			feh --bg-fill ~/backgrounds/blue.jpg
 		else
 			feh --bg-fill ~/backgrounds/blue-light.jpg
 		fi
 		;;
 	*)
 		if [ $curr_col -eq 0 ]; then
-			feh --bg-fill ~/backgrounds/nord.jpg
+			feh --bg-fill ~/backgrounds/nord.png
 		else
 			feh --bg-fill ~/backgrounds/nord-light.jpg
 		fi
