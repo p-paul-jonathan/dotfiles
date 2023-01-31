@@ -185,4 +185,9 @@ colors:
     magenta: '#d670d6'
     cyan: '#29b8db'
     white: '#ffffff'
-theme: Argonaut-vscode
+  theme: Argonaut-vscode
+
+window:
+  opacity: 0.6
+
+live_config_reload: true

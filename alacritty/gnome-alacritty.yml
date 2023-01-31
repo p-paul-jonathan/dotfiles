@@ -180,3 +180,8 @@ colors:
     cyan: '#8FBCBB'
     white: '#ECEFF4'
 theme: Nord
+
+live_config_reload: true
+
+window:
+  opacity: 0.6

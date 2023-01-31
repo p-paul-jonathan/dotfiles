@@ -179,3 +179,8 @@ colors:
     magenta: "#c18092"
     cyan: "#83b475"
     white: "#d8cda6"
+
+window:
+  opacity: 0.6
+
+live_config_reload: true
