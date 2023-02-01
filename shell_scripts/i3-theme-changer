@@ -6,8 +6,6 @@ if [ "$arg" = "--help" ]; then
 	echo "  Made By P Paul Jonathan"
 	echo "  options:"
 	echo "    pr: purple"
-	echo "    gr: green"
-	echo "    bl: blue"
 	echo "    no: nord (same as no arguments)"
 	exit
 fi
@@ -17,16 +15,6 @@ case $arg in
 		ln -sf ~/.config/i3/purple-config ~/.config/i3/config
 		ln -sf ~/.config/alacritty/purple-alacritty.yml ~/.config/alacritty/alacritty.yml
 		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Argonaut Theme",/' .config/Code/User/settings.json
-		;;
-	gr	) 
-		ln -sf ~/.config/i3/green-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/green-alacritty.yml ~/.config/alacritty/alacritty.yml
-		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Gruvbox Dark Hard",/' .config/Code/User/settings.json
-		;;
-	bl	)
-		ln -sf ~/.config/i3/blue-config ~/.config/i3/config
-		ln -sf ~/.config/alacritty/blue-alacritty.yml ~/.config/alacritty/alacritty.yml
-		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Solarized Dark",/' .config/Code/User/settings.json
 		;;
 	*	)
 		ln -sf ~/.config/i3/nord-config ~/.config/i3/config
