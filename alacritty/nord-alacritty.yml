@@ -181,6 +181,6 @@ colors:
     white: '#ECEFF4'
   theme: Nord
 window:
-  opacity: 0.6
+  opacity: 0.7
 
 live_config_reload: true
