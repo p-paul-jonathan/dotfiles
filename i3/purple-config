@@ -216,7 +216,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # pblur
-exec_always --no-startup-id ~/bash_scripts/set_c_theme.sh
+exec_always --no-startup-id /bin/random_wallpaper_setter.sh /home/paul/backgrounds/purple/
 
 # border
 default_border normal 4
@@ -231,5 +231,3 @@ exec_always --no-startup-id ~/.config/polybar/startup.sh
 bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
 bindsym Control+Mod1+Down exec i3-msg gaps inner current set 20
 
-# toggle dark mode
-bindsym $mod+Shift+t exec --no-startup-id ~/bash_scripts/set_c_theme.sh -t && ~/bash_scripts/set_c_theme.sh
