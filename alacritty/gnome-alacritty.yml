@@ -88,7 +88,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Terminus
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
     style: regular
@@ -121,7 +121,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 20.0
+  size: 15.0
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -155,7 +155,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#2E3440'
+    background: '#232731'
     foreground: '#D8DEE9'
 
   # Normal colors
@@ -183,5 +183,5 @@ theme: Nord
 
 live_config_reload: true
 
-window:
-  opacity: 0.8
+  # window:
+  #   opacity: 0.9
