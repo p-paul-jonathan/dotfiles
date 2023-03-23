@@ -232,3 +232,6 @@ exec_always --no-startup-id ~/.config/polybar/startup.sh
 bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
 bindsym Control+Mod1+Down exec i3-msg gaps inner current set 20
 
+
+# wallpaper change
+bindsym $mod+Shift+t exec /bin/random_wallpaper_setter.sh /home/paul/backgrounds/nord/

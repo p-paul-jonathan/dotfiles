@@ -122,6 +122,7 @@ font:
 
   # Point size
   size: 15.0
+
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -155,33 +156,35 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#232731'
-    foreground: '#D8DEE9'
+    background: '#09001a'
+    foreground: '#E5E5E5'
+
+  # Cursor colors
+  cursor:
+    text: '#09001a'
+    cursor: '#e5e5e5'
 
   # Normal colors
   normal:
-    black: '#3B4252'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#88C0D0'
-    white: '#E5E9F0'
+    black: '#000000'
+    red: '#cd3131'
+    green: '#0dbc79'
+    yellow: '#e5e510'
+    blue: '#2472c8'
+    magenta: '#bc3fbc'
+    cyan: '#11a8cd'
+    white: '#e5e5e5'
 
   # Bright colors
   bright:
-    black: '#4C566A'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#8FBCBB'
-    white: '#ECEFF4'
-theme: Nord
+    black: '#666666'
+    red: '#f14c4c'
+    green: '#23d18b'
+    yellow: '#f5f543'
+    blue: '#3b8eea'
+    magenta: '#d670d6'
+    cyan: '#29b8db'
+    white: '#ffffff'
+  theme: Argonaut-vscode
 
 live_config_reload: true
-
-  # window:
-  #   opacity: 0.9

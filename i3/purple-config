@@ -35,12 +35,12 @@ exec_always --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status kill -STOP pstatus && kill -CONT pstatus
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && /bin/paulnot -v
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && /bin/paulnot -v
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && /bin/paulnot -v
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86_MonBrightnessUp exec --no-startup-id brightnessctl set +50 && /bin/paulnot -b
-bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50- && /bin/paulnot -b
+# bindsym XF86_MonBrightnessUp exec --no-startup-id brightnessctl set +50 
+# bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50- 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -221,13 +221,14 @@ exec_always --no-startup-id /bin/random_wallpaper_setter.sh /home/paul/backgroun
 # border
 default_border normal 4
 
-# dunst
-exec_always --no-startup-id ~/.config/dunst/dunst_start.sh
-
-# polybar
-exec_always --no-startup-id ~/.config/polybar/startup.sh
+# xfce4-stuff
+exec_always --no-startup-id /bin/xfce4-panel
+exec_always --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec_always --no-startup-id /bin/xfce4-power-manager
 
 # full screen
 bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
 bindsym Control+Mod1+Down exec i3-msg gaps inner current set 20
 
+# wallpaper change
+bindsym $mod+Shift+t exec /bin/random_wallpaper_setter.sh /home/paul/backgrounds/purple/
