@@ -14,6 +14,11 @@ env:
   LANG: "en_US.UTF-8"
   LC_CTYPE: en_US.UTF-8
   #window:
+  # Window background opacity
+  #
+  # Specified in floating number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  #opacity: 1.0
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -88,10 +93,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: monospace
+    family: "monospace"
 
     # The `style` can be specified to pick a specific face.
-    style: regular
+    style: Regular
     # Bold font face
     #bold:
     # Font family
@@ -121,7 +126,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 15.0
+  size: 9.0
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -133,55 +138,40 @@ font:
   #glyph_offset:
   #  x: 0
   #  y: 0
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  # use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  name: Monokai Dimmed (dark)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#1e1e1e"
-    foreground: "#e3e3dd"
-  cursor:
-    text: "#1e1e1e"
-    cursor: "#e3e3dd"
-  normal:
-    black: "#1e1e1e"
-    red: "#c4265e"
-    green: "#86b42b"
-    yellow: "#b3b42b"
-    blue: "#6a7ec8"
-    magenta: "#8c6bc8"
-    cyan: "#56adbc"
-    white: "#e3e3dd"
-  bright:
-    black: "#666666"
-    red: "#c4265e"
-    green: "#a6e22e"
-    yellow: "#e2e22e"
-    blue: "#819aff"
-    magenta: "#ae81ff"
-    cyan: "#66d9ef"
-    white: "#f8f8f2"
+    background: '#282c34'
+    foreground: '#abb2bf'
 
-live_config_reload: true
+  # Normal colors
+  normal:
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
+
+  # Bright colors
+  bright:
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#ffffff'
+theme: One-Dark
 
 window:
   opacity: 1.0
-theme: Monokai_Dimmed
