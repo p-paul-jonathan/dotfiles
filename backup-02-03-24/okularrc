@@ -1,0 +1,22 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+1600x900 screen: Window-Maximized=true
+1600x900 screen: XPosition=300
+1600x900 screen: YPosition=145
+1920x1080 screen: XPosition=384
+1920x1080 screen: YPosition=180
+State=AAAA/wAAAAD9AAAAAQAAAAAAAADIAAAC7PwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgEAAABMAAAC7AAAAQ4BAAACAAAFdwAAAuwAAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgIAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/majed-swan-_PvpgpQpHqs-unsplash.jpg
+File2[$e]=$HOME/Documents/songs-11-02-24.pdf
+Name1[$e]=majed-swan-_PvpgpQpHqs-unsplash.jpg
+Name2[$e]=songs-11-02-24.pdf

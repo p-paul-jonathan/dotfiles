@@ -1,0 +1,45 @@
+#!/bin/bash
+
+opt=$1
+
+if [ ! -f ~/.paul-noti/notif-val ]; then
+    mkdir ~/.paul-noti
+    echo 0 > ~/.paul-noti/notif-val
+    echo 0 > ~/.paul-noti/bnotif-val
+fi
+
+if [ $(wc -c < ~/.paul-noti/notif-val) -eq 1 ]; then
+   echo 0 > ~/.paul-noti/notif-val
+fi
+
+if [ $(wc -c < ~/.paul-noti/bnotif-val) -eq 1 ]; then
+   echo 0 > ~/.paul-noti/bnotif-val
+
+fi
+
+case $opt in
+    '-b')
+        rep=$(cat ~/.paul-noti/bnotif-val)
+        bval=$(brightnessctl | grep Current | cut -d \( -f 2 | cut -d % -f 1)
+        pval=$(notify-send $bval -i /usr/share/icons/Faba/48x48/notifications/notification-display-brightness.svg -p -r $rep -h int:value:$bval)
+        echo $pval > ~/.paul-noti/bnotif-val
+        ;;
+    '-v')
+        rep=$(cat ~/.paul-noti/notif-val)
+        isMut=$(pamixer --get-volume-human)
+        vval=$(pamixer --get-volume)
+        if [[ $isMut == "muted"  ]]; then
+            pval=$(notify-send $vval -i /usr/share/icons/Faba/48x48/notifications/notification-audio-volume-muted.svg -p -r $rep -h int:value:$vval)
+        else
+            pval=$(notify-send $vval -i /usr/share/icons/Faba/48x48/notifications/notification-audio-volume-high.svg -p -r $rep -h int:value:$vval)
+        fi
+        echo $pval > ~/.paul-noti/notif-val
+        ;;
+    *)
+        echo "Notification Script"
+        echo "Made by P Paul Jonathan (github.com/ppauljonathan)"
+        echo "  usage"
+        echo "  -b: brightness"
+        echo "  -v: volume"
+        ;;
+esac

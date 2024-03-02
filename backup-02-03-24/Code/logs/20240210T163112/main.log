@@ -1,0 +1,6 @@
+2024-02-10 16:31:14.143 [info] update#setState idle
+2024-02-10 16:31:43.553 [info] update#setState checking for updates
+2024-02-10 16:31:43.559 [info] update#setState idle
+2024-02-10 16:32:50.733 [error] [UtilityProcessWorker]: terminated unexpectedly with code 15, signal: unknown
+2024-02-10 16:32:50.733 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 19712]: crashed with code 15 and reason 'killed'
+2024-02-10 16:32:50.744 [info] Extension host with pid 19732 exited with code: 0, signal: unknown.

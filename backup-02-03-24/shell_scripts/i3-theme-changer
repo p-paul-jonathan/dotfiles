@@ -1,0 +1,38 @@
+#!/bin/bash
+arg=$1
+
+if [ "$arg" = "--help" ]; then
+	echo "i3 theme changer"
+	echo "  Made By P Paul Jonathan"
+	echo "  options:"
+	echo "    pr: purple"
+	echo "    no: nord (same as no arguments)"
+	exit
+fi
+
+case $arg in
+	pr	) 
+		ln -sf ~/.config/i3/purple-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/purple-alacritty.yml ~/.config/alacritty/alacritty.yml
+		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Argonaut Theme",/' .config/Code/User/settings.json
+		;;
+	bl	) 
+		ln -sf ~/.config/i3/blue-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/blue-alacritty.yml ~/.config/alacritty/alacritty.yml
+		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "The Night Ocean",/' .config/Code/User/settings.json
+		;;
+	gr	) 
+		ln -sf ~/.config/i3/green-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/green-alacritty.yml ~/.config/alacritty/alacritty.yml
+		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Ayu Green Dark Bordered",/' .config/Code/User/settings.json
+		;;
+	*	)
+		ln -sf ~/.config/i3/nord-config ~/.config/i3/config
+		ln -sf ~/.config/alacritty/nord-alacritty.yml ~/.config/alacritty/alacritty.yml
+		sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Nord",/' .config/Code/User/settings.json
+		;;
+esac
+
+sleep 1
+i3-msg restart
+sleep 1
