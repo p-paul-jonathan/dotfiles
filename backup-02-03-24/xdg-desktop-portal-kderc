@@ -1,8 +1,0 @@
-[FileDialogSize]
-1920x1080 screen: Height=600
-1920x1080 screen: Width=980
-
-[KFileDialog Settings]
-Recent Files[$e]=majed-swan-_PvpgpQpHqs-unsplash.jpg,file:$HOME/Documents/songs-26-01-24.pdf,file:$HOME/Downloads/majed-swan-_PvpgpQpHqs-unsplash.jpg
-Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/Documents/
-detailViewIconSize=16
