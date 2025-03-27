@@ -25,8 +25,8 @@ vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
--- NERDTree Open
-vim.keymap.set('n', '<C-b>', ':NERDTreeToggle<CR>', opts)
+-- NeoTree Open
+vim.keymap.set('n', '<C-b>', ':Neotree toggle right<CR>', opts)
 
 -- Buffers
 vim.keymap.set('n', '<leader>bs', ':w<CR>', opts) -- Save buffer
