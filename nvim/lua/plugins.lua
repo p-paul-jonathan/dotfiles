@@ -22,7 +22,13 @@ require("lazy").setup({
   { "joshdick/onedark.vim" }, -- onedark
   { "sts10/vim-pink-moon" }, -- pink-moon
   -- Statusline: Airline
-  { "vim-airline/vim-airline" },
+  {
+  " vim-airline/vim-airline",
+    dependencies = { "vim-airline/vim-airline-themes", "tpope/vim-fugitive" },
+    config = function()
+      vim.g["airline#extensions#branch#enabled"] = 1
+    end
+  },
 
   -- Auto-close pairs
   {
