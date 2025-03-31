@@ -15,7 +15,7 @@ mason_lspconfig.setup({
     "pyright",    -- Python
     "solargraph", -- Ruby
     "clangd",     -- C, C++
-    "emmet_language_server" -- Emmet
+    "emmet_language_server", -- emmet
   }
 })
 

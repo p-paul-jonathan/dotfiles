@@ -16,12 +16,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Color Theme
+  -- Color Theme: Nord
   { "shaunsingh/nord.nvim" }, -- nord
   { "projekt0n/github-nvim-theme" }, -- github
   { "joshdick/onedark.vim" }, -- onedark
   { "sts10/vim-pink-moon" }, -- pink-moon
-
   -- Statusline: Airline
   { "vim-airline/vim-airline" },
 
