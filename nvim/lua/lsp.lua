@@ -36,6 +36,12 @@ local on_attach = function(_, bufnr)
   vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)         -- Next diagnostic
 end
 
+
+-- hide diagnostics by default
+vim.diagnostic.config({
+  virtual_text = false
+})
+
 -- Capabilities for auto-completion
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
