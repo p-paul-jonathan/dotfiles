@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 10
+font pango:0xProto Nerd Font Mono 12
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -31,28 +31,30 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet
+exec_always --no-startup-id blueman-applet
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status kill -STOP pstatus && kill -CONT pstatus
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86_MonBrightnessUp exec --no-startup-id brightnessctl set +50 
-bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50- 
+bindsym XF86_MonBrightnessUp exec --no-startup-id brightnessctl set +50
+bindsym XF86_MonBrightnessDown exec --no-startup-id brightnessctl set 50-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec alacritty --config-file=/home/paul/.config/alacritty/alacritty-i3.toml
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#98c379' -sf '#282c34'
+# bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-15' -sb '#98c379' -sf '#282c34'
+bindsym $mod+d exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -154,10 +156,10 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "[l]ogout" {
-		bindsym l exec i3-msg exit
-        bindsym Return exec i3-msg exit
-        bindsym Escape mode "default" exec "killall i3-nagbar"
-        bindsym $mod+Shift+e mode "default" exec "killall i3-nagbar"
+  bindsym l exec i3-msg exit
+  bindsym Return exec i3-msg exit
+  bindsym Escape mode "default" exec "killall i3-nagbar"
+  bindsym $mod+Shift+e mode "default" exec "killall i3-nagbar"
 }
 
 bindsym $mod+Shift+e mode "[l]ogout" exec "i3-nagbar -m 'Logout Mode' -f 'xft:DejaVu Sans Mono:size=30'"
@@ -205,16 +207,16 @@ exec_always /bin/set_touchpad_settings.sh
 gaps inner 20
 
 # picom
-exec_always --no-startup-id picom --experimental-backends  --config=/home/paul/.config/picom/picom.conf
+exec_always --no-startup-id picom --config=/home/paul/.config/picom/picom.conf
 
 #class                 border  backgr. text    indicator child_border
-# client.focused          #81a1c1 #81a1c1 #81a1c1 #88c0d0   #81a1c1
-# client.focused_inactive #4a566a #4a566a #4a566a #3b4252   #4a566a
-# client.unfocused        #4a566a #4a566a #4a566a #3b4252   #4a566a
-# client.urgent           #bf616a #bf616a #bf616a #900000   #bf616a
-# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #81a1c1 #82aaff #1d3b53 #fc514e   #81a1c1
+client.focused_inactive #4a566a #1d3b53 #82aaff #fc514e   #4a566a
+client.unfocused        #4a566a #1d3b53 #82aaff #fc514e   #4a566a
+client.urgent           #bf616a #bf616a #bf616a #900000   #bf616a
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-# client.background       #ffffff
+client.background       #ffffff
 
 # border
 default_border pixel 0
@@ -226,8 +228,8 @@ exec_always --no-startup-id /bin/polybar_startup.sh
 bindsym Control+Mod1+Up exec i3-msg gaps inner current set 0
 bindsym Control+Mod1+Down exec i3-msg gaps inner current set 20
 
-# background 
-# exec_always --no-startup-id feh --bg-fill ~/backgrounds/olivier-guillard-xnGu_KGrqX8-unsplash.jpg 
+# background
+# exec_always --no-startup-id feh --bg-fill ~/backgrounds/olivier-guillard-xnGu_KGrqX8-unsplash.jpg
 exec_always --no-startup-id nitrogen --restore
 
 # xscreensaver

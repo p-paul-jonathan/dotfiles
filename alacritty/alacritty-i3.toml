@@ -44,14 +44,14 @@ LC_CTYPE = "en_US.UTF-8"
 TERM = "alacritty"
 
 [font]
-size = 18.0
+size = 10.0
 
 [font.normal]
 family = "0xProto Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 1.0
+opacity = 0.9
 
 [terminal.shell]
 program = "/bin/zsh"
