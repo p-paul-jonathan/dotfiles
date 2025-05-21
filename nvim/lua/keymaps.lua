@@ -48,6 +48,12 @@ vim.keymap.set("n", "<A-Left>", "0", opts)   -- Alt + Left: Move to beginning of
 vim.keymap.set("n", "<A-Up>", "gg", opts)    -- Alt + Up: Move to beginning of file
 vim.keymap.set("n", "<A-Down>", "G", opts)   -- Alt + Down: Move to end of file
 
+
+-- quickfix list
+vim.keymap.set("n", "<A-j>", ":cn<CR>", opts)
+vim.keymap.set("n", "<A-k>", ":cp<CR>", opts)
+
+
 -----------------
 -- Visual mode --
 -----------------
