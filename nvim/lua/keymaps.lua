@@ -25,7 +25,7 @@ vim.keymap.set('n', '<C-S-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-S-Right>', ':vertical resize +2<CR>', opts)
 
 -- NeoTree Open
-vim.keymap.set('n', '<C-b>', ':Neotree toggle right<CR>', opts)
+vim.keymap.set('n', '<C-b>', ':Neotree toggle right reveal<CR>', opts)
 
 -- Buffers
 vim.keymap.set('n', '<leader>bs', ':w<CR>', opts) -- Save buffer
@@ -44,7 +44,7 @@ vim.keymap.set("n", "<leader>wc", ":close<CR>", { desc = "Close Split" })
 vim.keymap.set("n", "<C-Right>", "w", opts)  -- Ctrl + Right: Move forward by word
 vim.keymap.set("n", "<C-Left>", "b", opts)   -- Ctrl + Left: Move backward by word
 vim.keymap.set("n", "<A-Right>", "$", opts)  -- Alt + Right: Move to end of line
-vim.keymap.set("n", "<A-Left>", "0", opts)   -- Alt + Left: Move to beginning of line
+vim.keymap.set("n", "<A-Left>", "^", opts)   -- Alt + Left: Move to beginning of line
 vim.keymap.set("n", "<A-Up>", "gg", opts)    -- Alt + Up: Move to beginning of file
 vim.keymap.set("n", "<A-Down>", "G", opts)   -- Alt + Down: Move to end of file
 
@@ -65,8 +65,8 @@ vim.keymap.set('v', '>', '>gv', opts)
 -- movement
 vim.keymap.set("v", "<C-Right>", "w", opts)  -- Ctrl + Right: Move forward by word
 vim.keymap.set("v", "<C-Left>", "b", opts)   -- Ctrl + Left: Move backward by word
-vim.keymap.set("v", "<A-Right>", "$", opts)  -- Alt + Right: Move to end of line
-vim.keymap.set("v", "<A-Left>", "0", opts)   -- Alt + Left: Move to beginning of line
+vim.keymap.set("v", "<A-Right>", "$", opts)  -- Alt + Right: Move to end of lin:
+vim.keymap.set("v", "<A-Left>", "^", opts)   -- Alt + Left: Move to beginning of line
 vim.keymap.set("v", "<A-Up>", "gg", opts)    -- Alt + Up: Move to beginning of file
 vim.keymap.set("v", "<A-Down>", "G", opts)   -- Alt + Down: Move to end of file
 
@@ -78,6 +78,6 @@ vim.keymap.set("v", "<A-Down>", "G", opts)   -- Alt + Down: Move to end of file
 -- vim.keymap.set("i", "<C-Right>", "<C-o>w", opts)  -- Ctrl + Right: Move forward by word
 -- vim.keymap.set("i", "<C-Left>", "<C-o>b", opts)   -- Ctrl + Left: Move backward by word
 vim.keymap.set("i", "<A-Right>", "<C-o>$", opts)  -- Alt + Right: Move to end of line
-vim.keymap.set("i", "<A-Left>", "<C-o>0", opts)   -- Alt + Left: Move to beginning of line
+vim.keymap.set("i", "<A-Left>", "<C-o>^", opts)   -- Alt + Left: Move to beginning of line
 vim.keymap.set("i", "<A-Up>", "<C-o>gg", opts)    -- Alt + Up: Move to beginning of file
 vim.keymap.set("i", "<A-Down>", "<C-o>G", opts)   -- Alt + Down: Move to end of file

@@ -21,13 +21,8 @@ require("lazy").setup({
 	{ "projekt0n/github-nvim-theme" }, -- github
 	{ "joshdick/onedark.vim" }, -- onedark
 	{ "sts10/vim-pink-moon" }, -- pink-moon
-
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
+  { "ellisonleao/gruvbox.nvim" }, -- gruvbox
+	{ "folke/tokyonight.nvim" }, -- tokyonight
 	-- Statusline: Airline
 	{
 		"vim-airline/vim-airline",
