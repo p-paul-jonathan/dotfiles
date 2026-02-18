@@ -1,0 +1,8 @@
+--theme Nord
+--font "0xProto Nerd Font Mono"
+--background "#282C34"
+
+--pad-horiz 40
+--pad-vert 40
+--line-pad 2
+--tab-width 2
