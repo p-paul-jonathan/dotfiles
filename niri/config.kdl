@@ -1,0 +1,1031 @@
+// ============================================================
+// NIRI CONFIG
+// Debian 13 / Niri 26.04
+//
+// Design:
+//   - i3-style keyboard muscle memory
+//   - dynamic monitors / no hardcoded outputs
+//   - dynamic Niri workspaces
+//   - sensible laptop + external monitor behavior
+//   - subtle macOS-like visual treatment
+//   - Quickshell/Noctalia can be added later
+// ============================================================
+
+include "dms/colors.kdl"
+
+
+// ============================================================
+// INPUT
+// ============================================================
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        // Keep normal mouse behavior.
+    }
+
+    trackpoint {
+        // Keep normal TrackPoint behavior.
+    }
+
+    // Uncomment if you want the cursor to jump to newly focused windows.
+    // warp-mouse-to-focus
+
+    // Uncomment if you want focus to follow the mouse.
+    // focus-follows-mouse max-scroll-amount="0%"
+}
+
+
+// ============================================================
+// OUTPUTS
+// ============================================================
+//
+// INTENTIONALLY NO OUTPUT CONFIGURATION.
+//
+// Niri will automatically detect:
+//
+//   eDP-1
+//   HDMI-A-1
+//   DP-1
+//   DP-2
+//   USB-C docks
+//   etc.
+//
+// This is deliberate. You can move between desks/monitors
+// without changing this configuration.
+//
+// ============================================================
+
+
+// ============================================================
+// LAYOUT
+// ============================================================
+
+layout {
+    // Space between columns/windows.
+    gaps 12
+
+    // Keep the focused column centered when it would otherwise
+    // be pushed off-screen.
+    center-focused-column "on-overflow"
+
+    // Column widths used by Mod+R / Mod+Shift+R.
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    // New windows start at half the available width.
+    default-column-width {
+        proportion 0.5
+    }
+
+    // --------------------------------------------------------
+    // Focus ring
+    // --------------------------------------------------------
+
+    focus-ring {
+        width 3
+    }
+
+    // --------------------------------------------------------
+    // Border
+    // --------------------------------------------------------
+
+    border {
+        off
+    }
+
+    // --------------------------------------------------------
+    // Window shadows
+    // --------------------------------------------------------
+
+    shadow {
+        on
+
+        softness 30
+        spread 4
+
+        offset x=0 y=5
+
+        color "#00000055"
+    }
+
+    // --------------------------------------------------------
+    // Outer spacing for the future top panel.
+    //
+    // Leave disabled for now because we don't have the
+    // Quickshell panel installed yet.
+    //
+    // When the panel is ready, we can enable:
+    //
+    // top 48
+    //
+    // --------------------------------------------------------
+
+    struts {
+        // top 48
+    }
+}
+
+
+// ============================================================
+// STARTUP
+// ============================================================
+//
+// DO NOT START WAYBAR.
+//
+// The shell will eventually be handled by Quickshell.
+//
+// ============================================================
+
+
+// No Waybar.
+// No Rofi.
+// No wallpaper daemon.
+//
+// Quickshell will be added here once its shell is ready.
+//
+// Example:
+//
+// spawn-at-startup "qs" "-c" "my-shell"
+
+
+// ============================================================
+// HOTKEY OVERLAY
+// ============================================================
+//
+// Useful while learning the Niri-specific commands.
+//
+// Mod+Shift+/
+//
+// ============================================================
+
+hotkey-overlay {
+    // Keep enabled.
+}
+
+
+// ============================================================
+// WINDOW DECORATIONS
+// ============================================================
+//
+// Ask applications to omit their own decorations where possible.
+// This lets Niri control the visual appearance more consistently.
+//
+// ============================================================
+
+prefer-no-csd
+
+
+// ============================================================
+// SCREENSHOTS
+// ============================================================
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+
+// ============================================================
+// ANIMATIONS
+// ============================================================
+//
+// Keep Niri animations enabled.
+//
+// We'll tune these later if desired.
+// ============================================================
+
+
+// ============================================================
+// WINDOW RULES
+// ============================================================
+
+
+// ------------------------------------------------------------
+// Rounded corners for all windows
+// ------------------------------------------------------------
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+
+// ------------------------------------------------------------
+// Firefox Picture-in-Picture
+// ------------------------------------------------------------
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Pip$|^Picture-in-Picture$"
+
+    open-floating true
+}
+
+
+// ------------------------------------------------------------
+// WezTerm compatibility
+// ------------------------------------------------------------
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+
+    default-column-width {}
+}
+
+
+// ------------------------------------------------------------
+// Terminal Blur
+// ------------------------------------------------------------
+
+window-rule {
+    match app-id="^Alacritty$"
+
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+window-rule {
+    match app-id="^tilix$"
+
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+
+// ============================================================
+// KEYBINDINGS
+// ============================================================
+//
+// PRIMARY MODIFIER:
+//
+//     Mod = Super
+//
+// This deliberately follows i3 muscle memory.
+//
+// ============================================================
+
+binds {
+
+    // ========================================================
+    // I3 HELP / HOTKEY OVERLAY
+    // ========================================================
+
+    Mod+Shift+Slash {
+        show-hotkey-overlay
+    }
+
+
+    // ========================================================
+    // APPLICATIONS
+    // ========================================================
+
+    // i3: Mod+Enter
+    Mod+Return {
+        spawn "alacritty"
+    }
+    Ctrl+Alt+T {
+      spawn "tilix"
+    }
+
+    // i3: Mod+d
+    //
+    // Temporary launcher.
+    //
+    // Once Quickshell is ready, this becomes the Quickshell
+    // launcher instead.
+    //
+    // Mod+D {
+    //     spawn "fuzzel"
+    // }
+
+
+    // ========================================================
+    // WINDOW MANAGEMENT
+    // ========================================================
+
+    // i3: Mod+Shift+q
+    //
+    // Close the focused window.
+    Mod+Shift+Q {
+        close-window
+    }
+
+
+    // ========================================================
+    // FOCUS
+    // ========================================================
+    //
+    // Classic i3:
+    //
+    // Mod+h
+    // Mod+j
+    // Mod+k
+    // Mod+l
+    //
+    // ========================================================
+
+    Mod+H {
+        focus-column-left
+    }
+
+    Mod+J {
+        focus-window-down
+    }
+
+    Mod+K {
+        focus-window-up
+    }
+
+    Mod+L {
+        focus-column-right
+    }
+
+
+    // Arrow-key equivalents.
+    //
+    // Useful when you don't want to use the home row.
+
+    Mod+Left {
+        focus-column-left
+    }
+
+    Mod+Down {
+        focus-window-down
+    }
+
+    Mod+Up {
+        focus-window-up
+    }
+
+    Mod+Right {
+        focus-column-right
+    }
+
+
+    // ========================================================
+    // MOVE WINDOWS
+    // ========================================================
+    //
+    // Classic i3:
+    //
+    // Mod+Shift+h/j/k/l
+    //
+    // ========================================================
+
+    Mod+Shift+H {
+        move-column-left
+    }
+
+    Mod+Shift+J {
+        move-window-down
+    }
+
+    Mod+Shift+K {
+        move-window-up
+    }
+
+    Mod+Shift+L {
+        move-column-right
+    }
+
+
+    Mod+Shift+Left {
+        move-column-left
+    }
+
+    Mod+Shift+Down {
+        move-window-down
+    }
+
+    Mod+Shift+Up {
+        move-window-up
+    }
+
+    Mod+Shift+Right {
+        move-column-right
+    }
+
+
+    // ========================================================
+    // MONITOR FOCUS
+    // ========================================================
+    //
+    // These are deliberately directional.
+    //
+    // No monitor names are hardcoded.
+    //
+    // This works whether the external monitor is:
+    //
+    // HDMI-A-1
+    // DP-1
+    // DP-2
+    // USB-C dock
+    // etc.
+    //
+    // ========================================================
+
+    Mod+Ctrl+H {
+        focus-monitor-left
+    }
+
+    Mod+Ctrl+J {
+        focus-monitor-down
+    }
+
+    Mod+Ctrl+K {
+        focus-monitor-up
+    }
+
+    Mod+Ctrl+L {
+        focus-monitor-right
+    }
+
+
+    Mod+Ctrl+Left {
+        focus-monitor-left
+    }
+
+    Mod+Ctrl+Down {
+        focus-monitor-down
+    }
+
+    Mod+Ctrl+Up {
+        focus-monitor-up
+    }
+
+    Mod+Ctrl+Right {
+        focus-monitor-right
+    }
+
+
+    // ========================================================
+    // MOVE WINDOW TO MONITOR
+    // ========================================================
+    //
+    // Mod+Ctrl+Shift+h/j/k/l
+    //
+    // ========================================================
+
+    Mod+Ctrl+Shift+H {
+        move-column-to-monitor-left
+    }
+
+    Mod+Ctrl+Shift+J {
+        move-column-to-monitor-down
+    }
+
+    Mod+Ctrl+Shift+K {
+        move-column-to-monitor-up
+    }
+
+    Mod+Ctrl+Shift+L {
+        move-column-to-monitor-right
+    }
+
+
+    Mod+Ctrl+Shift+Left {
+        move-column-to-monitor-left
+    }
+
+    Mod+Ctrl+Shift+Down {
+        move-column-to-monitor-down
+    }
+
+    Mod+Ctrl+Shift+Up {
+        move-column-to-monitor-up
+    }
+
+    Mod+Ctrl+Shift+Right {
+        move-column-to-monitor-right
+    }
+
+
+    // ========================================================
+    // WORKSPACES
+    // ========================================================
+    //
+    // i3 muscle memory:
+    //
+    // Mod+1..9
+    // Mod+0
+    //
+    // Niri workspaces are dynamic.
+    //
+    // We intentionally DO NOT associate these with a monitor.
+    //
+    // ========================================================
+
+    Mod+1 {
+        focus-workspace 1
+    }
+
+    Mod+2 {
+        focus-workspace 2
+    }
+
+    Mod+3 {
+        focus-workspace 3
+    }
+
+    Mod+4 {
+        focus-workspace 4
+    }
+
+    Mod+5 {
+        focus-workspace 5
+    }
+
+    Mod+6 {
+        focus-workspace 6
+    }
+
+    Mod+7 {
+        focus-workspace 7
+    }
+
+    Mod+8 {
+        focus-workspace 8
+    }
+
+    Mod+9 {
+        focus-workspace 9
+    }
+
+    Mod+0 {
+        focus-workspace 10
+    }
+
+
+    // ========================================================
+    // MOVE WINDOW TO WORKSPACE
+    // ========================================================
+    //
+    // Classic i3 muscle memory:
+    //
+    // Mod+Shift+1
+    // Mod+Shift+2
+    // ...
+    //
+    // ========================================================
+
+    Mod+Shift+1 {
+        move-column-to-workspace 1
+    }
+
+    Mod+Shift+2 {
+        move-column-to-workspace 2
+    }
+
+    Mod+Shift+3 {
+        move-column-to-workspace 3
+    }
+
+    Mod+Shift+4 {
+        move-column-to-workspace 4
+    }
+
+    Mod+Shift+5 {
+        move-column-to-workspace 5
+    }
+
+    Mod+Shift+6 {
+        move-column-to-workspace 6
+    }
+
+    Mod+Shift+7 {
+        move-column-to-workspace 7
+    }
+
+    Mod+Shift+8 {
+        move-column-to-workspace 8
+    }
+
+    Mod+Shift+9 {
+        move-column-to-workspace 9
+    }
+
+    Mod+Shift+0 {
+        move-column-to-workspace 10
+    }
+
+
+    // ========================================================
+    // PREVIOUS WORKSPACE
+    // ========================================================
+    //
+    // Very useful i3-style workflow.
+    //
+    // ========================================================
+
+    Mod+Tab {
+        focus-workspace-previous
+    }
+
+
+    // ========================================================
+    // WORKSPACE NAVIGATION
+    // ========================================================
+
+    Mod+Page_Down {
+        focus-workspace-down
+    }
+
+    Mod+Page_Up {
+        focus-workspace-up
+    }
+
+    Mod+U {
+        focus-workspace-down
+    }
+
+    Mod+I {
+        focus-workspace-up
+    }
+
+
+    // Move column between adjacent workspaces.
+
+    Mod+Ctrl+Page_Down {
+        move-column-to-workspace-down
+    }
+
+    Mod+Ctrl+Page_Up {
+        move-column-to-workspace-up
+    }
+
+    Mod+Ctrl+U {
+        move-column-to-workspace-down
+    }
+
+    Mod+Ctrl+I {
+        move-column-to-workspace-up
+    }
+
+
+    // ========================================================
+    // COLUMN / WINDOW STRUCTURE
+    // ========================================================
+
+    // Pull the focused window into the column on the left.
+    Mod+BracketLeft {
+        consume-or-expel-window-left
+    }
+
+    // Pull the focused window into the column on the right.
+    Mod+BracketRight {
+        consume-or-expel-window-right
+    }
+
+    // Consume window into current column.
+    Mod+Comma {
+        consume-window-into-column
+    }
+
+    // Expel window from current column.
+    Mod+Period {
+        expel-window-from-column
+    }
+
+
+    // ========================================================
+    // COLUMN WIDTH / "RESIZE"
+    // ========================================================
+    //
+    // Niri doesn't have i3's resize mode.
+    //
+    // Therefore:
+    //
+    // Mod+r
+    //     cycle preset width
+    //
+    // Mod+Shift+r
+    //     cycle backwards
+    //
+    // Fine adjustment:
+    //
+    // Mod+Minus / Mod+Equal
+    // Mod+Shift+Minus / Mod+Shift+Equal
+    //
+    // ========================================================
+
+    Mod+R {
+        switch-preset-column-width
+    }
+
+    Mod+Shift+R {
+        switch-preset-column-width-back
+    }
+
+    Mod+Minus {
+        set-column-width "-10%"
+    }
+
+    Mod+Equal {
+        set-column-width "+10%"
+    }
+
+    Mod+Shift+Minus {
+        set-window-height "-10%"
+    }
+
+    Mod+Shift+Equal {
+        set-window-height "+10%"
+    }
+
+    Mod+Ctrl+R {
+        reset-window-height
+    }
+
+    Mod+Ctrl+Shift+R {
+        switch-preset-window-height
+    }
+
+
+    // ========================================================
+    // FULLSCREEN / MAXIMIZE
+    // ========================================================
+
+    // i3-ish fullscreen.
+    Mod+F {
+        fullscreen-window
+    }
+
+    // Niri's column maximize.
+    Mod+M {
+        maximize-column
+    }
+
+    // Maximize without preserving gaps.
+    Mod+Shift+M {
+        maximize-window-to-edges
+    }
+
+    // Expand column to available width.
+    Mod+Ctrl+F {
+        expand-column-to-available-width
+    }
+
+
+    // ========================================================
+    // CENTER
+    // ========================================================
+
+    Mod+C {
+        center-column
+    }
+
+    Mod+Ctrl+C {
+        center-visible-columns
+    }
+
+
+    // ========================================================
+    // FLOATING
+    // ========================================================
+    //
+    // Niri's equivalent of toggling floating.
+    //
+    // ========================================================
+
+    Mod+V {
+        toggle-window-floating
+    }
+
+    Mod+Shift+V {
+        switch-focus-between-floating-and-tiling
+    }
+
+
+    // ========================================================
+    // TAB / STACKED COLUMN
+    // ========================================================
+
+    Mod+W {
+        toggle-column-tabbed-display
+    }
+
+
+    // ========================================================
+    // OVERVIEW
+    // ========================================================
+
+    Mod+O repeat=false {
+        toggle-overview
+    }
+
+
+    // ========================================================
+    // WINDOW POSITIONING
+    // ========================================================
+
+    Mod+Home {
+        focus-column-first
+    }
+
+    Mod+End {
+        focus-column-last
+    }
+
+    Mod+Ctrl+Home {
+        move-column-to-first
+    }
+
+    Mod+Ctrl+End {
+        move-column-to-last
+    }
+
+
+    // ========================================================
+    // SCROLLING
+    // ========================================================
+
+    // Workspace scrolling.
+
+    Mod+WheelScrollDown cooldown-ms=150 {
+        focus-workspace-down
+    }
+
+    Mod+WheelScrollUp cooldown-ms=150 {
+        focus-workspace-up
+    }
+
+    // Move current column between workspaces.
+
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 {
+        move-column-to-workspace-down
+    }
+
+    Mod+Ctrl+WheelScrollUp cooldown-ms=150 {
+        move-column-to-workspace-up
+    }
+
+    // Horizontal column navigation.
+
+    Mod+WheelScrollRight {
+        focus-column-right
+    }
+
+    Mod+WheelScrollLeft {
+        focus-column-left
+    }
+
+    Mod+Ctrl+WheelScrollRight {
+        move-column-right
+    }
+
+    Mod+Ctrl+WheelScrollLeft {
+        move-column-left
+    }
+
+
+    // ========================================================
+    // SCREENSHOTS
+    // ========================================================
+
+    Print {
+        screenshot
+    }
+
+    Ctrl+Print {
+        screenshot-screen
+    }
+
+    Alt+Print {
+        screenshot-window
+    }
+
+
+    // ========================================================
+    // AUDIO
+    // ========================================================
+
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"
+    }
+
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"
+    }
+
+    XF86AudioMute allow-when-locked=true {
+        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    }
+
+    XF86AudioMicMute allow-when-locked=true {
+        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    }
+
+
+    // ========================================================
+    // MEDIA
+    // ========================================================
+
+    XF86AudioPlay allow-when-locked=true {
+        spawn-sh "playerctl play-pause"
+    }
+
+    XF86AudioStop allow-when-locked=true {
+        spawn-sh "playerctl stop"
+    }
+
+    XF86AudioPrev allow-when-locked=true {
+        spawn-sh "playerctl previous"
+    }
+
+    XF86AudioNext allow-when-locked=true {
+        spawn-sh "playerctl next"
+    }
+
+
+    // ========================================================
+    // BRIGHTNESS
+    // ========================================================
+
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn "brightnessctl" "--class=backlight" "set" "+10%"
+    }
+
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn "brightnessctl" "--class=backlight" "set" "10%-"
+    }
+
+
+    // ========================================================
+    // KEYBOARD SHORTCUT INHIBITION
+    // ========================================================
+
+    Mod+Escape allow-inhibiting=false {
+        toggle-keyboard-shortcuts-inhibit
+    }
+
+
+    // ========================================================
+    // RELOAD / EXIT
+    // ========================================================
+    //
+    // Niri automatically reloads config.kdl when it changes.
+    //
+    // We therefore don't need i3's Mod+Shift+c reload binding.
+    //
+    // Keep the traditional binding as a harmless manual
+    // re-validation/reload trigger through niri msg.
+    //
+    // ========================================================
+
+    Mod+Shift+C {
+        spawn "niri" "msg" "action" "load-config-file"
+    }
+
+
+    // i3-style quit.
+    Mod+Shift+E {
+        quit
+    }
+
+
+    // ========================================================
+    // LOCK
+    // ========================================================
+    //
+    // We'll replace this with your final lock-screen setup
+    // once the Quickshell shell is ready.
+    //
+    // ========================================================
+
+    Super+Alt+L {
+        spawn "loginctl" "lock-session"
+    }
+
+
+    // ========================================================
+    // MONITOR POWER
+    // ========================================================
+
+    Mod+Shift+P {
+        power-off-monitors
+    }
+}
+
+// DMS Include Configs
+include "dms/windowrules.kdl"
+include "dms/cursor.kdl"
+include "dms/binds.kdl"
+include "dms/layout.kdl"
+include "dms/outputs.kdl"
+include "dms/input.kdl"
