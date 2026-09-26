@@ -1,0 +1,11 @@
+[config]
+reload_apps = false
+
+[templates.neovim]
+input_path = "~/.config/matugen/templates/nvim.lua"
+output_path = "~/.config/nvim/matugen.lua"
+post_hook = "pkill -SIGUSR1 nvim"
+
+[templates.libadwaita]
+input_path = "~/.config/matugen/templates/libadwaita.css"
+output_path = "~/.config/gtk-4.0/libadwaita.css"
