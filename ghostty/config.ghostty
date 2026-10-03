@@ -1,0 +1,45 @@
+# DMS theme
+theme = dankcolors
+
+# Transparency
+background-opacity = 0.85
+
+# Padding
+window-padding-x = 8
+window-padding-y = 8
+
+# iTerm-style splits
+keybind = alt+d=new_split:right
+keybind = alt+shift+d=new_split:down
+
+# New tab
+keybind = ctrl+t=new_tab
+keybind = ctrl+n=new_window
+
+# Reset and clear
+keybind = ctrl+k=reset
+
+# Tab switching
+keybind = alt+1=goto_tab:1
+keybind = alt+2=goto_tab:2
+keybind = alt+3=goto_tab:3
+keybind = alt+4=goto_tab:4
+keybind = alt+5=goto_tab:5
+
+# Split navigation
+keybind = ctrl+alt+left=goto_split:left
+keybind = ctrl+alt+right=goto_split:right
+keybind = ctrl+alt+up=goto_split:up
+keybind = ctrl+alt+down=goto_split:down
+
+# zsh
+command = /usr/bin/zsh
+
+# cursor
+cursor-style = block
+shell-integration-features = no-cursor
+
+# font
+font-family = "0xProto Nerd Font Mono"
+font-size = 12
+

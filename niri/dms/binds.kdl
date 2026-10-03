@@ -1,4 +1,6 @@
 binds {
     Mod+D hotkey-overlay-title="Default Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Alt+F4 { close-window; }
     Alt+Ctrl+L { spawn "loginctl" "lock-session"; }
+    Alt+Ctrl+R { spawn "ghostty"; }
 }

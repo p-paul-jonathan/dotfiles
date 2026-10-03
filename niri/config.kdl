@@ -12,6 +12,7 @@
 // ============================================================
 
 include "dms/colors.kdl"
+spawn-at-startup "env" "DMS_ENABLE_GTK_REFRESH=1" "dms" "run"
 
 
 // ============================================================
@@ -88,9 +89,9 @@ layout {
         proportion 0.66667
     }
 
-    // New windows start at half the available width.
+    // New windows start at the available width.
     default-column-width {
-        proportion 0.5
+        proportion 1.0
     }
 
     // --------------------------------------------------------
@@ -162,7 +163,6 @@ layout {
 // Example:
 //
 // spawn-at-startup "qs" "-c" "my-shell"
-spawn-at-startup "dms" "run"
 
 
 // ============================================================
@@ -268,6 +268,42 @@ window-rule {
     }
 }
 
+window-rule {
+    match app-id="^com.mitchellh.ghostty$"
+
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+// ------------------------------------------------------------
+// Neovide Blur
+// ------------------------------------------------------------
+
+window-rule {
+    match app-id="^neovide$"
+
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+// ------------------------------------------------------------
+// OpenLP Settings
+// ------------------------------------------------------------
+
+window-rule {
+    match app-id="^OpenLP$" title="^OpenLP$"
+    open-on-output "eDP-1"
+}
+
+window-rule {
+    match app-id="^OpenLP$" title="^Display Window$"
+    open-floating true
+    open-fullscreen true
+}
 
 // ------------------------------------------------------------
 // Overview Blur
@@ -305,6 +341,14 @@ binds {
         show-hotkey-overlay
     }
 
+    // ========================================================
+    // POWERMENU
+    // ========================================================
+
+    Ctrl+Alt+Delete {
+        spawn "dms" "ipc" "call" "powermenu" "toggle"
+    }
+
 
     // ========================================================
     // APPLICATIONS
@@ -312,10 +356,10 @@ binds {
 
     // i3: Mod+Enter
     Mod+Return {
-        spawn "alacritty"
+        spawn "ghostty"
     }
     Ctrl+Alt+T {
-      spawn "tilix"
+      spawn "alacritty"
     }
 
     // i3: Mod+d
@@ -786,8 +830,12 @@ binds {
         maximize-column
     }
 
-    // Maximize without preserving gaps.
     Mod+Shift+M {
+      set-window-height "100%"
+    }
+
+    // Maximize without preserving gaps.
+    Mod+Shift+F {
         maximize-window-to-edges
     }
 
